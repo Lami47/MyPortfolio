@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+}
+
+.Grid0{
+    border: 1px solid black;
+    width: auto;
+    height: 50rem;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+/* Grid 0 */
+.SideBar{
+    grid-column: 1;
+    border: 1px solid black;
+}
+
+/* side-bar */
+.TopOfSideBar{
+    padding: 2rem;
+    border: 1px solid black;
+    border-bottom-right-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Heading{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.MainScreen{
+    grid-column: 2;
+    border: 1px solid black;
+    height: 5rem;
+}
+
+/* Mainscreen */
+.MainImg{
+    border: 1px solid black;
+    height: 5rem;
+}
+
+.Grid1{
+    border: 1px solid black;
+    height: 5rem;
+}
+
+.Card0{
+    border: 1px solid black;
+}
+
+/* For all Icons */
+.WebIcon{
+
+}
+
+.UserIcon{
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 4rem;
+    text-overflow: ellipsis;
+}
+
+/* for all content */
+.text-headings{
+    text-align: center;
+}
+
+.text{
+    border-radius: 2rem;
+}
