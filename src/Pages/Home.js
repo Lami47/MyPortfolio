@@ -44,7 +44,7 @@ export default function Home(){
             <div className="Grid0">
                 <div className="SideBar">
                     <div className="TopOfSideBar">
-                        <img src="" alt="a">
+                        <img src="" alt="Brb">
                         </img>
                         <h3 className="text-heading">
                             <strong>
@@ -61,11 +61,23 @@ export default function Home(){
                 <div className="MainScreen">
                     {/* floating navbar- only appears when scrolling down */}
                     <div className="MainNav">
-
+                        <button className="grid-item1">
+                            Home
+                        </button>
+                        <button className="grid-item2">
+                            About Me
+                        </button>
+                        <button className="grid-item3">
+                            Past Projects
+                        </button>
+                        <button className="grid-item4">
+                            Write a review
+                        </button>
                     </div>
                     {/* Main pic with description */}
                     <div className="MainImg">
-
+                        <img className="BackgroundImg" src="https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg" alt="" >
+                        </img>
                     </div>
                     {/* grid for index => exp(links to my journey in the tech industry), projects completed() */}
                     <div className="Grid1">
