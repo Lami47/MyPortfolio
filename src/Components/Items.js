@@ -38,7 +38,9 @@ const ItemList = () => {
     return(
         <>
             <div className="ItemsGrid0">
-                <button className="CardBtns" onClick={goBackOneItem}>Back</button>
+                <div className="Card1">
+                    <button className="CardBtns" onClick={goBackOneItem}>Back</button>
+                </div>
                 <div className="Cards">
                     {displayItems.map(item => (
                         <div key={item.id} className="ItemCard">
@@ -49,7 +51,9 @@ const ItemList = () => {
                         </div>
                         ))}
                 </div>
-                <button className="CardBtns" onClick={goToNextItem}>Next</button>
+                <div className="Card2">
+                    <button className="CardBtns" onClick={goToNextItem}>Next</button>
+                </div>
             </div>
         </>
     )

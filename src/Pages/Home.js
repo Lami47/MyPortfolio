@@ -24,6 +24,24 @@ const userData = {
     // {jobTitle: '', where: '',duration: '', startingDate: '', endingDate: '' }
   ]
 };
+//Overview of:
+const QueCards = [
+    { id:'1', text:'Total years of experience', yearsOfExperience: 'I am closing in on 4 months of experience as a Software Developer and ', handler:'onSubmit'},
+    { id:'2', text:'Projects completes', totalProjectsCompleted: '', handler:'onSubmit'},
+    { id:'3', text:'Types of Components made', totalComponentsMade: '', handler:'onSubmit'},
+]
+
+function DisplayCards () {
+    return (
+        <>
+            {QueCards.map(btn => (
+            <button key={btn.id} className="cards" onClick={btn.handler}>
+                {btn.text}
+            </button>
+            ))}
+        </>
+    )
+}
 
 export default function Home() {
   // State to toggle the sidebar visibility
@@ -85,11 +103,7 @@ export default function Home() {
         </div>
 
         <div className="Grid1">
-          <div className="cards">
-                {userData.experienceInSoftware}
-            </div>
-          <div className="cards">Total projects completed</div>
-          <div className="cards">Total components made</div>
+            <DisplayCards />
         </div>
 
         {/* Main picture and description */}
