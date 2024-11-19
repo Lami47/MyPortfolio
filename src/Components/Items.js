@@ -2,7 +2,7 @@ import React, {useState, useEffect } from "react";
 import '../Css/Items.css';
 
 const items = [
-    {id: 1, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
+    {id: 1, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: 'Past Projects', text: 'total of 3 projects',alt:''},
     {id: 2, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
     {id: 3, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
     {id: 4, imageSrc: 'https://i.postimg.cc/VLTgCMMg/OIP-3.jpg', title: '', text: '',alt:''},
@@ -42,18 +42,20 @@ const ItemList = () => {
 
     return(
         <>
-            <button className="CardBtns" onClick={goBackOneItem}>Back</button>
-            <div className="Cards">
-                {displayItems.map(item => (
-                    <div key={item.id} className="ItemCard">
-                        <div className="CardImg">
-                            <img className="item-image" src={item.imageSrc} alt={item.alt}/>
-                            <p className="item-text">{item.text}</p>
+            <div className="ItemsGrid0">
+                <button className="CardBtns" onClick={goBackOneItem}>Back</button>
+                <div className="Cards">
+                    {displayItems.map(item => (
+                        <div key={item.id} className="ItemCard">
+                            <div className="CardImg">
+                                <img className="item-image" src={item.imageSrc} alt={item.alt}/>
+                                <p className="item-text">{item.text}</p>
+                            </div>
                         </div>
-                    </div>
-                    ))}
+                        ))}
+                </div>
+                <button className="CardBtns" onClick={goToNextItem}>Next</button>
             </div>
-            <button className="CardBtns" onClick={goToNextItem}>Next</button>
         </>
     )
 }

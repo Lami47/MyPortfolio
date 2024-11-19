@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    height: auto;
 }
 
 /* Icons */
@@ -56,6 +57,11 @@
 .MainImg{
     border: 1px solid black;
     height: 5rem;
+}
+.OverBackground{
+    color: lightblue;
+    top: 10%;
+    left: 20%;
 }
 /* Grid 1 */
 .Grid1{
@@ -165,4 +171,8 @@
 
 .text{
     border-radius: 2rem;
+}
+
+.SlideShow{
+    height: auto;
 }

@@ -2,6 +2,11 @@ import "../Css/Home.css"
 import '../Components/Items'
 import ItemList from "../Components/Items"
 
+const userData = {   
+    name: 'Liam Rosenberg',
+    Age: '22',
+}
+
 export default function Home(){
     return(
         <body>
@@ -53,7 +58,7 @@ export default function Home(){
                     <div className="MainImg">
                         <img className="BackgroundImg" src="https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg" alt="" >
                         </img>
-                        <div className="">
+                        <div className="OverBackground">
                             <h1>
                                 <strong>
                                     Welcome to Liam's Portfolio
@@ -81,7 +86,7 @@ export default function Home(){
                         </div>
                     </div>
                     {/* shows skills that 3 skills i do well */}
-                    <div>
+                    <div className="SlideShow">
                         {/* turning into a mapping later on. list of skills: text,img. create a slider(3 columns with 5-10 skills offered) */}
                         <ItemList/>
                     </div>
