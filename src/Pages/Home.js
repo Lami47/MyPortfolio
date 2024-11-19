@@ -35,7 +35,7 @@ function DisplayCards () {
     return (
         <>
             {QueCards.map(btn => (
-            <button key={btn.id} className="cards" onClick={btn.handler}>
+            <button key={btn.id} className="cards" onClick={() => console.log(btn.handler)}>
                 {btn.text}
             </button>
             ))}
