@@ -29,11 +29,6 @@ const ItemList = () => {
         return() => clearInterval(interval); //prevention
     }, []);
 
-    //to fix the issue the buttons caused
-    useEffect(() => {
-        const interval = ((prevIndex) => (prevIndex + 1) % items.length);
-    })
-
     const displayItems = [
         items[(currentIndex + 0) % items.length],
         items[(currentIndex + 1) % items.length],
