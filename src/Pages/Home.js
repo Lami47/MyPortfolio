@@ -1,111 +1,107 @@
-import "../Css/Home.css"
-import '../Components/Items'
-import ItemList from "../Components/Items"
+import React, { useState } from "react";
+import "../Css/Home.css";
+import '../Components/Items';
+import ItemList from "../Components/Items";
 
-const userData = {   
-    name: 'Liam Rosenberg',
-    Age: '22',
-}
+const userData = {
+  name: 'Liam Rosenberg',
+  age: '22',
+  skills: [
+    'Communication', 'Computer literate', 'Self-motivated', 'Punctual', 'Assertive', 'Research',
+    'Time management', 'Planning', 'Team player', 'Analytical', 'English speaking',
+  ],
+  hobbies: ['Chess', 'Gaming', 'Hikes', 'Drawing', 'Foody'],
+  careerObj: 'Within the next 4 years I plan to expand my knowledge, understanding on a variety of areas in IT as well as business practices...',
+  education: [
+    { institute: 'College of Cape Town (Crawford)', duration: '1 year', year: '', course: 'ODETDP' },
+    { institute: 'College of Cape Town (Crawford)', duration: '1 year', year: '', course: 'Cisco Networking' },
+    { institute: 'Plumstead high school', duration: '4 years', year: '', course: '' },
+  ],
+  experienceInSoftware: 'About 4 months',
+  experience: [
+    {jobTitle: 'Tutor', where:'Face-2-Face', duration: '', startingDate: 'August 2023', endingDate: 'Current' },
+    {jobTitle: 'Systems Developing Intern',where: 'Capaciti', duration: '', startingDate: 'August 2024', endingDate: 'Current' },
+    // {jobTitle: '', where: '',duration: '', startingDate: '', endingDate: '' }
+  ]
+};
 
-export default function Home(){
-    return(
-        <body>
-            <div className="Grid0">
-                <div className="SideBar">
-                    <div className="TopOfSideBar">
-                        <img className="Icon" src="https://i.postimg.cc/SN4ChRHv/Whats-App-Image-2024-11-19-at-10-35-07-f60543c5.jpg" alt="Brb">
-                        </img>
-                        <h3 className="text-heading">
-                            <strong>
-                                Liam Rosenberg
-                            </strong>
-                        </h3>
-                    </div>
-                    <div className="BottomOfSideBar">
-                        <div className="MyStats">
-                            <div>
-                                Username:
-                            </div>
-                            <div>
-                                Age:
-                            </div>
-                            <div>
-                                Projects:
-                            </div>
-                            <div>
-                                Username:
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="MainScreen">
-                    {/* floating navbar- only appears when scrolling down */}
-                    <div className="MainNav">
-                        <button className="grid-item1">
-                            Home
-                        </button>
-                        <button className="grid-item2">
-                            About Me
-                        </button>
-                        <button className="grid-item3">
-                            Past Projects
-                        </button>
-                        <button className="grid-item4">
-                            Write a review
-                        </button>
-                    </div>
-                    {/* Main pic with description */}
-                    <div className="MainImg">
-                        <img className="BackgroundImg" src="https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg" alt="" >
-                        </img>
-                        <div className="OverBackground">
-                            <h1>
-                                <strong>
-                                    Welcome to Liam's Portfolio
-                                </strong>
-                            </h1>
-                            <p>
+export default function Home() {
+  // State to toggle the sidebar visibility
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-                            </p>
-                        </div>
-                    </div>
-                    {/* grid for index => exp(links to my journey in the tech industry), projects completed() */}
-                    <div className="Grid1">
-                        <div className="cards">
-                            {/* mapping throughout the list of items,imgs and links. using a component */}
-                            Current experience
-                        </div>
-                        <div className="cards">
-                            Total projects completed
-                        </div>
-                        <div className="cards">
-                            Total components made
-                        </div>
-                        <div className="cards">
-                            Total components made
-                        </div>
-                    </div>
-                    {/* shows skills that 3 skills i do well */}
-                    <div className="SlideShow">
-                        {/* turning into a mapping later on. list of skills: text,img. create a slider(3 columns with 5-10 skills offered) */}
-                        <ItemList/>
-                    </div>
-                    {/* shows skills that 3 skills i do well */}
-                    <div>
-                        {/* turning into a mapping later on. list of past projects: text,img. create a slider(3 columns with 5-10 skills offered) */}
-                        <h2 className="Heading">
+  // Toggle function for sidebar
+  const toggleSidebar = () => {
+    setIsSidebarOpen(prevState => !prevState);
+  };
 
-                        </h2>
-                        <div className="Cards1">
-                            {/* an image of what i've done in the past */}
-                            <img src=" " alt="Currently on holiday">
-                            
-                            </img>
-                            {/* short description */}
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="Grid0">
+      {/* Button to open/close sidebar */}
+      <div className={`SideBar ${isSidebarOpen ? 'open' : ''}`}>
+        <div className="TopOfSideBar">
+          <img className="Icon" src="https://i.postimg.cc/SN4ChRHv/Whats-App-Image-2024-11-19-at-10-35-07-f60543c5.jpg" alt="Brb" />
+          <h3 className="text-heading">
+            <strong>
+              Liam Rosenberg
+            </strong>
+          </h3>
+        </div>
+        <div className="BottomOfSideBar">
+            <br/>
+            <h3>Age: {userData.age}</h3>
+            <br/>
+            <section className="SideNavText">
+                <h2 className="SubHeadings">Skills</h2>
+                <ul>
+                {userData.skills.map((skill, index) => (
+                    <li key={index}> {skill} </li>
+                ))}
+                </ul>
+            </section>
+            <br/>
+            <section className="SideNavText">
+                <h2 className="SubHeadings">Hobbies</h2>
+                <ul>
+                {userData.hobbies.map((hobby, index) => (
+                    <li key={index}> {hobby} </li>
+                ))}
+                </ul>
+            </section>
+        </div>
+      </div>
+
+      <div className="MainScreen">
+        <div className="MainImg">
+            <button
+                className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
+                onClick={toggleSidebar}
+            >
+                {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
+            </button>
+          <img className="BackgroundImg" src="https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg" alt="" />
+          <div className="OverBackgroundImgText">
+            <h1><strong>Welcome to {userData.name}'s Portfolio</strong></h1>
+          </div>
+        </div>
+
+        <div className="Grid1">
+          <div className="cards">
+                {userData.experienceInSoftware}
             </div>
-        </body>
-    )
+          <div className="cards">Total projects completed</div>
+          <div className="cards">Total components made</div>
+        </div>
+
+        {/* Main picture and description */}
+        <div className="SlideShow">
+          <ItemList />
+        </div>
+
+        {/* Showcase past projects */}
+        <div className="ShowCase">
+          
+        </div>
+      </div>
+    </div>
+  );
 }

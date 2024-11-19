@@ -1,130 +1,155 @@
-*{
+/* Global Reset */
+* {
     margin: 0;
     height: auto;
 }
 
 /* Icons */
-.Icon{
+.Icon {
     width: 60%;
     height: 80%;
     border-radius: 5rem;
 }
-/* card styling */
-/* 1st cardset */
 
-.Grid0{
+/* Card styling */
+.Grid0 {
     border: 1px solid black;
     width: auto;
     height: 50rem;
-    display: grid;
-    grid-template-columns: 20% 80%;
-}
-/* Grid 0 */
-.SideBar{
-    grid-column: 1;
-    border: 1px solid black;
 }
 
-/* side-bar */
-.TopOfSideBar{
+/* SideBar */
+.SideBar {
+    position: fixed;
+    top: 0;
+    left: -316px;  /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
     padding: 2rem;
-    border: 1px solid black;
-    border-bottom-right-radius: 2rem;
+    transition: left 0.3s ease; /* Smooth transition for sliding */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.SideBar.open {
+    left: 0; /* Slides in when open */
+}
+
+/* Sidebar Toggle Button */
+.SidebarToggleBtn {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    z-index: 1100;
+}
+
+.SidebarToggleBtn:hover {
+    background-color: #444; /* Darken button on hover */
+}
+
+/* Top of Sidebar */
+.TopOfSideBar {
+    padding: 2rem;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     height: 10rem;
+    scale:1.3;
 }
-.MyStats{
+
+
+/* Main Screen */
+.MainScreen {
+    grid-column: 2;
+    border: 1px solid black;
+    transition: margin-left 0.3s ease; /* Slide effect for content */
+}
+
+.SideBar.open + .MainScreen {
+    margin-left: 316px; /* Make space for the sidebar */
+}
+
+.MyStats {
     display: flex;
     flex-direction: column;
 }
 
-.Heading{
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+
+.MainImg {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
 }
 
-/* Mainscreen */
-.MainScreen{
-    grid-column: 2;
-    border: 1px solid black;
-    height: 5rem;
+.BackgroundImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.MainImg{
-    border: 1px solid black;
-    height: 5rem;
+.WelcomeText {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
 }
-.OverBackground{
-    color: lightblue;
-    top: 10%;
-    left: 20%;
-}
+
 /* Grid 1 */
-.Grid1{
+.Grid1 {
     border: 1px solid black;
     height: 5rem;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: auto auto auto;
     justify-content: space-evenly;
     align-items: center;
 }
-.cards{
+
+.cards {
     width: auto;
     height: 70%;
-
     border: 1px solid black;
     border-radius: 3rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 1.1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
-
 }
 
-/* Main Nav */
-.MainNav{
-
+/* SlideShow */
+.SlideShow {
+    color: black;
+    height: auto;
 }
 
-
-.grid-item1{
-    grid-column: 2;
-    border-radius: 3rem;
-    width: 80%;
-    height: 60%;
-}
-.grid-item2{
-    grid-column: 3;
-    border-radius: 3rem;
-}
-.grid-item3{
-    grid-column: 4;
-    border-radius: 3rem;
-}
-.grid-item4{
-    grid-column: 5;
-    border-radius: 3rem;
-}
-
-
-.Card0{
+/* ShowCase */
+.Card0 {
     border: 1px solid black;
 }
 
-/* For all Icons */
-.WebIcon{
-
-}
-
-.UserIcon{
+/* User Icons */
+.UserIcon {
     width: 5rem;
     height: 5rem;
     border: 1px solid black;
@@ -132,47 +157,27 @@
     border-radius: 4rem;
     text-overflow: ellipsis;
 }
-.MainNav{
+
+/* Navbar */
+.MainNav {
     height: 5rem;
     display: grid;
     grid-template-columns: 60% 10% 10% 10% 10%;
 }
 
-.MainImg{
-    position: relative;
-    width: 100%;
-    height: 30rem; /* Full viewport height */
-    overflow: hidden;
-}
-
-.BackgroundImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire container */
+.OverBackgroundImgText{
+    color:white;
+    top: 20%;
+    left: 10%;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-.WelcomeText{
-    position: absolute;
-    top: 40%; /* Centers the text vertically */
-    left: 30%; /* Centers the text horizontally */
-    transform: translate(-50%, -50%); /* Adjusts position to be perfectly centered */
-    color: white; /* White text color */
-    text-align: center;
-    z-index: 1;
+    z-index: 1100;
 }
 
-/* for all content */
-.text-headings{
-    text-align: center;
-}
-
-.text{
-    border-radius: 2rem;
-}
-
-.SlideShow{
-    height: auto;
+.cards{
+    width: fit-content;
+    padding: 0.3rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: white;
+    background-color: #444;
 }
