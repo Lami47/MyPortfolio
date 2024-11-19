@@ -1,42 +1,6 @@
 import "../Css/Home.css"
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// import { getAuth, onAuthStateChanged } from "firebase/auth";
-// import { getFirestore, doc, getDoc } from "firebase/firestore";
-// import { getDatabase, ref, get } from "firebase/database";
-    
-// // Initialize Firestore
-// const db = getFirestore(app);
-
-// // Assuming the user ID is stored in a variable, for example, after the user logs in
-// const userId = "user-123";  // You'd typically get this from the authenticated user
-
-// // Get the user document from Firestore
-// const userDocRef = doc(db, "users", userId);
-// const userDocSnapshot = await getDoc(userDocRef);
-
-// if (userDocSnapshot.exists()) {
-// // If the document exists, get the username
-// const username = userDocSnapshot.data().username;
-// console.log('Username from Firestore:', username);
-// } else {
-// console.log('No such user!');
-// }
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBBomfKgw527IwFybOdFjaw7AwIbM4pxKY",
-//   authDomain: "myportfolio-f9a26.firebaseapp.com",
-//   projectId: "myportfolio-f9a26",
-//   storageBucket: "myportfolio-f9a26.firebasestorage.app",
-//   messagingSenderId: "1037516038850",
-//   appId: "1:1037516038850:web:0d13b5af827f2c5334515b",
-//   measurementId: "G-C7Y1HQSWVL"
-// };
-
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+import '../Components/Items'
+import ItemList from "../Components/Items"
 
 export default function Home(){
     return(
@@ -44,7 +8,7 @@ export default function Home(){
             <div className="Grid0">
                 <div className="SideBar">
                     <div className="TopOfSideBar">
-                        <img src="" alt="Brb">
+                        <img className="Icon" src="https://i.postimg.cc/SN4ChRHv/Whats-App-Image-2024-11-19-at-10-35-07-f60543c5.jpg" alt="Brb">
                         </img>
                         <h3 className="text-heading">
                             <strong>
@@ -53,9 +17,20 @@ export default function Home(){
                         </h3>
                     </div>
                     <div className="BottomOfSideBar">
-                        <p>
-                        Username:
-                        </p>
+                        <div className="MyStats">
+                            <div>
+                                Username:
+                            </div>
+                            <div>
+                                Age:
+                            </div>
+                            <div>
+                                Projects:
+                            </div>
+                            <div>
+                                Username:
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="MainScreen">
@@ -78,26 +53,37 @@ export default function Home(){
                     <div className="MainImg">
                         <img className="BackgroundImg" src="https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg" alt="" >
                         </img>
+                        <div className="">
+                            <h1>
+                                <strong>
+                                    Welcome to Liam's Portfolio
+                                </strong>
+                            </h1>
+                            <p>
+
+                            </p>
+                        </div>
                     </div>
                     {/* grid for index => exp(links to my journey in the tech industry), projects completed() */}
                     <div className="Grid1">
-                        <div>
+                        <div className="cards">
                             {/* mapping throughout the list of items,imgs and links. using a component */}
+                            Current experience
+                        </div>
+                        <div className="cards">
+                            Total projects completed
+                        </div>
+                        <div className="cards">
+                            Total components made
+                        </div>
+                        <div className="cards">
+                            Total components made
                         </div>
                     </div>
                     {/* shows skills that 3 skills i do well */}
                     <div>
                         {/* turning into a mapping later on. list of skills: text,img. create a slider(3 columns with 5-10 skills offered) */}
-                        <h2 className="Heading">
-
-                        </h2>
-                        <div className="Cards0">
-                            {/* an image of what i've done in the past */}
-                            <img src=" " alt="Currently on holiday">
-                            
-                            </img>
-                            {/* short description */}
-                        </div>
+                        <ItemList/>
                     </div>
                     {/* shows skills that 3 skills i do well */}
                     <div>
