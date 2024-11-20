@@ -10,9 +10,11 @@ const items = [
 ]
 
 const dropDownData = [
-    {id: 1, title: 'Hello', text: 'Outside'},
+    {id: 1, title: '', text: 'Outside'},
     {id: 2, title: 'From', text: ''},
-    {id: 3, title: 'The', text: ''}
+    {id: 3, title: 'The', text: ''},
+    {id: 4, title: 'outside', text: 'Outside'},
+    {id: 5, title: 'i', text: 'Outside'}
 ]
 
 const ItemList = () => {
@@ -57,7 +59,7 @@ const ItemList = () => {
                 <div className="Cards">
                     {displayItems.map(item => (
                         <div key={item.id} className="ItemCard">
-                            <button key={item.id} className="CardItems" onClick={() => handleButtonClick(item.id)}>
+                            <button className="CardItems" onClick={() => handleButtonClick(item.id)}>
                                 <div className="CardImg">
                                     <img className="item-image" src={item.imageSrc} alt={item.alt}/>
                                     <p className="item-text">{item.text}</p>
@@ -65,11 +67,11 @@ const ItemList = () => {
                             </button>
                         </div>
                         ))}
-                        <DropDownData 
-                            selectedId={theSelectedId}
-                            isPopupOpen={dropDownIsOpen}
-                            setPopupOpen={setDropDownIsOpen}
-                        />
+                    <DropDownData 
+                        theSelectedId={theSelectedId}
+                        dropDownIsOpen={dropDownIsOpen}
+                        setDropDownIsOpen={setDropDownIsOpen}
+                    />
                 </div>
                 <div className="Card2">
                     <button className="CardBtns" onClick={goToNextItem}>Next</button>
@@ -81,9 +83,9 @@ const ItemList = () => {
 // NEEDS CSS
 
 //popup for DisplayCards
-function DropDownData ({ theSelectedId, dropDownIsOpen, setDropDownisOpen }) {  
+function DropDownData ({ theSelectedId, dropDownIsOpen, setDropDownIsOpen }) {  
     const hideDropDown = () => {
-      setDropDownisOpen(false);
+      setDropDownIsOpen(false);
     };
   
     // for when nothing is displayed yet
@@ -96,9 +98,9 @@ function DropDownData ({ theSelectedId, dropDownIsOpen, setDropDownisOpen }) {
   
     return(
       <>
-        <div className="DropDownWindow">
-          <button className="Hide" onClick={() => hideDropDown()}>X</button>
-          <h3 className="DropDownHeading">{dropDown.heading}</h3>
+        <div className={`DropDownWindow ${dropDownIsOpen ? 'show' : ''}`}>
+          <button className="Hide" onClick={hideDropDown}>X</button>
+          <h3 className="DropDownHeading">{dropDown.title}</h3>
           <p>{dropDown.text}</p>
         </div>
       </>

@@ -90,7 +90,7 @@ export default function Home() {
               <DisplayCards />
           </div>
           {/* slideshow with brief summary of the websites and what i contributed */}
-          {/* Main picture and description */}
+          {/* About me description */}
           <div className="SlideShow">
             <ItemList />
           </div>

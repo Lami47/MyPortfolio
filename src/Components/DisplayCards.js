@@ -4,13 +4,13 @@ import { useState } from "react";
 const QueCards = [
     { id:'1', text:'Total years of experience', handler:'onSubmit1'},
     { id:'2', text:'Projects completes', handler:'onSubmit2'},
-    { id:'3', text:'Types of Components made', handler:'onSubmit3'},
+    { id:'3', text:'The project that stood out', handler:'onSubmit3'},
 ]
 //goals and aspirations
 const popupData = [
-  {id: '1',heading:'when', text: 'ashdjkahs', handler:'onSubmitWhen'},
-  {id: '2',heading:'What', text: 'sjksfjkjs', handler:'onSubmitWhat'},
-  {id: '3',heading:'why', text: 'cxvhxjkwe', handler:'onSubmitWhy'},
+  {id: '1',heading:'Experience', text: 'I have about 4 months experience within the Software Developing field', handler:''},
+  {id: '2',heading:'Projects I have worked on', text: 'Thus far, i worked on multiple projects around web applications. A few examples are: e-commerce, task-management, e-learning platform', handler:'onSubmitWhat'},
+  {id: '3',heading:'The project that stood out', text: 'This is easily the most recent project I have completed at the AfricanBank Hackathon. We were tasked with creating a web application to empower the smaller businesses in the townships. because our group was so large, on the website, I only created a bunch of smaller function like: Comments section, linking each page and assisting other with their code especially with mapping and merging issue', handler:'onSubmitWhy'},
   {id: '4',heading:'how', text: '', handler:'onSubmithow'},
 ]
 

@@ -194,7 +194,10 @@
 
     width: 50%;
     height: 50% auto;
-    padding-bottom: 1rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     z-index: 1000;
     position: absolute;
