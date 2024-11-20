@@ -26,22 +26,65 @@ const userData = {
 };
 //Overview of:
 const QueCards = [
-    { id:'1', text:'Total years of experience', yearsOfExperience: 'I am closing in on 4 months of experience as a Software Developer and ', handler:'onSubmit'},
-    { id:'2', text:'Projects completes', totalProjectsCompleted: '', handler:'onSubmit'},
-    { id:'3', text:'Types of Components made', totalComponentsMade: '', handler:'onSubmit'},
+    { id:'1', text:'Total years of experience', handler:'onSubmit1'},
+    { id:'2', text:'Projects completes', handler:'onSubmit2'},
+    { id:'3', text:'Types of Components made', handler:'onSubmit3'},
+]
+//goals and aspirations
+const popupData = [
+  {id: '1',heading:'when', text: 'ashdjkahs', handler:'onSubmitWhen'},
+  {id: '2',heading:'What', text: 'sjksfjkjs', handler:'onSubmitWhat'},
+  {id: '3',heading:'why', text: 'cxvhxjkwe', handler:'onSubmitWhy'},
+  {id: '4',heading:'how', text: '', handler:'onSubmithow'},
 ]
 
+//buttons
 function DisplayCards () {
-    return (
-        <>
-            {QueCards.map(btn => (
-            <button key={btn.id} className="cards" onClick={() => console.log(btn.handler)}>
-                {btn.text}
-            </button>
-            ))}
-        </>
-    )
+  const [selectedId, setSelectedId] = useState(null)
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const handleButtonClick = (id) => {
+    setSelectedId(id)
+    setPopupOpen(true);
+  }
+  return (
+    <>
+      {QueCards.map(btn => (
+      <button key={btn.id} className="cards" onClick={() => handleButtonClick(btn.id)}>
+        {btn.text}
+      </button>
+      ))}
+      <PopUpBtn 
+        selectedId={selectedId}
+        isPopupOpen={isPopupOpen}
+        setPopupOpen={setPopupOpen}
+      />
+    </>
+  );
 }
+//popup for DisplayCards
+function PopUpBtn ({ selectedId, isPopupOpen, setPopupOpen }) {  
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
+
+  // for when nothing is displayed yet
+  if (!isPopupOpen) return null;
+
+  // incase theres a blank container
+  const popup = popupData.find(pdata => pdata.id === selectedId);
+
+  if (!popup) return null; 
+
+  return(
+    <>
+      <div className="PopUpWindow">
+        <button className="CloseBtn" onClick={() => closePopup()}>X</button>
+        <h3 className="PopUpHeading">{popup.heading}</h3>
+        <p>{popup.text}</p>
+      </div>
+    </>
+)}
 
 export default function Home() {
   // State to toggle the sidebar visibility
@@ -53,69 +96,71 @@ export default function Home() {
   };
 
   return (
-    <div className="Grid0">
-      {/* Button to open/close sidebar */}
-      <div className={`SideBar ${isSidebarOpen ? 'open' : ''}`}>
-        <div className="TopOfSideBar">
-          <img className="Icon" src="https://i.postimg.cc/SN4ChRHv/Whats-App-Image-2024-11-19-at-10-35-07-f60543c5.jpg" alt="Brb" />
-          <h3 className="text-heading">
-            <strong>
-              Liam Rosenberg
-            </strong>
-          </h3>
-        </div>
-        <div className="BottomOfSideBar">
-            <br/>
-            <h3>Age: {userData.age}</h3>
-            <br/>
-            <section className="SideNavText">
-                <h2 className="SubHeadings">Skills</h2>
-                <ul>
-                {userData.skills.map((skill, index) => (
-                    <li key={index}> {skill} </li>
-                ))}
-                </ul>
-            </section>
-            <br/>
-            <section className="SideNavText">
-                <h2 className="SubHeadings">Hobbies</h2>
-                <ul>
-                {userData.hobbies.map((hobby, index) => (
-                    <li key={index}> {hobby} </li>
-                ))}
-                </ul>
-            </section>
-        </div>
-      </div>
-
-      <div className="MainScreen">
-        <div className="MainImg">
-            <button
-                className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
-                onClick={toggleSidebar}
-            >
-                {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
-            </button>
-          <img className="BackgroundImg" src="https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg" alt="" />
-          <div className="OverBackgroundImgText">
-            <h1><strong>Welcome to {userData.name}'s Portfolio</strong></h1>
+    <>
+      <div className="Grid0">
+        {/* Button to open/close sidebar */}
+        <div className={`SideBar ${isSidebarOpen ? 'open' : ''}`}>
+          <div className="TopOfSideBar">
+            <img className="Icon" src="https://i.postimg.cc/SN4ChRHv/Whats-App-Image-2024-11-19-at-10-35-07-f60543c5.jpg" alt="Brb" />
+            <h3 className="text-heading">
+              <strong>
+                Liam Rosenberg
+              </strong>
+            </h3>
+          </div>
+          <div className="BottomOfSideBar">
+              <br/>
+              <h3>Age: {userData.age}</h3>
+              <br/>
+              <section className="SideNavText">
+                  <h2 className="SubHeadings">Skills</h2>
+                  <ul>
+                  {userData.skills.map((skill, index) => (
+                      <li key={index}> {skill} </li>
+                  ))}
+                  </ul>
+              </section>
+              <br/>
+              <section className="SideNavText">
+                  <h2 className="SubHeadings">Hobbies</h2>
+                  <ul>
+                  {userData.hobbies.map((hobby, index) => (
+                      <li key={index}> {hobby} </li>
+                  ))}
+                  </ul>
+              </section>
           </div>
         </div>
 
-        <div className="Grid1">
-            <DisplayCards />
-        </div>
+        <div className="MainScreen">
+          <div className="MainImg">
+              <button
+                  className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
+                  onClick={toggleSidebar}
+              >
+                  {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
+              </button>
+            <img className="BackgroundImg" src="https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg" alt="" />
+            <div className="OverBackgroundImgText">
+              <h1><strong>Welcome to {userData.name}'s Portfolio</strong></h1>
+            </div>
+          </div>
 
-        {/* Main picture and description */}
-        <div className="SlideShow">
-          <ItemList />
-        </div>
+          <div className="Grid1">
+              <DisplayCards />
+          </div>
 
-        {/* Showcase past projects */}
-        <div className="ShowCase">
-          
+          {/* Main picture and description */}
+          <div className="SlideShow">
+            <ItemList />
+          </div>
+
+          {/* Showcase past projects */}
+          <div className="ShowCase">
+            
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
