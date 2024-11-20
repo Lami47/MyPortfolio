@@ -10,7 +10,7 @@ const items = [
 ]
 
 const dropDownData = [
-    {id: 1, title: '', text: 'Outside'},
+    {id: 1, title: 'Hello', text: 'Outside'},
     {id: 2, title: 'From', text: ''},
     {id: 3, title: 'The', text: ''},
     {id: 4, title: 'outside', text: 'Outside'},
@@ -100,8 +100,13 @@ function DropDownData ({ theSelectedId, dropDownIsOpen, setDropDownIsOpen }) {
       <>
         <div className={`DropDownWindow ${dropDownIsOpen ? 'show' : ''}`}>
           <button className="Hide" onClick={hideDropDown}>X</button>
-          <h3 className="DropDownHeading">{dropDown.title}</h3>
-          <p>{dropDown.text}</p>
+          <div className="DropDownHeading">
+            <h3>{dropDown.title}</h3>
+          </div>
+          <br/>
+          <div className="DropDownText">
+            <h4>{dropDown.text}</h4>
+          </div>
         </div>
       </>
   )}
