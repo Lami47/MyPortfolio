@@ -5,12 +5,25 @@ const items = [
     {id: 1, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: 'Past Projects', text: 'total of 3 projects',alt:''},
     {id: 2, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
     {id: 3, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
-    {id: 4, imageSrc: 'https://i.postimg.cc/VLTgCMMg/OIP-3.jpg', title: '', text: '',alt:''},
-    {id: 5, imageSrc: 'https://i.postimg.cc/VLTgCMMg/OIP-3.jpg', title: '', text: '',alt:''},
+    {id: 4, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
+    {id: 5, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
+]
+
+const dropDownData = [
+    {id: 1, title: 'Hello', text: 'Outside'},
+    {id: 2, title: 'From', text: ''},
+    {id: 3, title: 'The', text: ''}
 ]
 
 const ItemList = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const [theSelectedId, setSelectedId] = useState(null)
+    const [dropDownIsOpen, setDropDownIsOpen] = useState(false);
+
+    const handleButtonClick = (id) => {
+        setSelectedId(id)
+        setDropDownIsOpen(true);
+    }
     //Buttons
     const goToNextItem = () =>{
         setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
@@ -44,12 +57,19 @@ const ItemList = () => {
                 <div className="Cards">
                     {displayItems.map(item => (
                         <div key={item.id} className="ItemCard">
-                            <div className="CardImg">
-                                <img className="item-image" src={item.imageSrc} alt={item.alt}/>
-                                <p className="item-text">{item.text}</p>
-                            </div>
+                            <button key={item.id} className="CardItems" onClick={() => handleButtonClick(item.id)}>
+                                <div className="CardImg">
+                                    <img className="item-image" src={item.imageSrc} alt={item.alt}/>
+                                    <p className="item-text">{item.text}</p>
+                                </div>
+                            </button>
                         </div>
                         ))}
+                        <DropDownData 
+                            selectedId={theSelectedId}
+                            isPopupOpen={dropDownIsOpen}
+                            setPopupOpen={setDropDownIsOpen}
+                        />
                 </div>
                 <div className="Card2">
                     <button className="CardBtns" onClick={goToNextItem}>Next</button>
@@ -58,5 +78,30 @@ const ItemList = () => {
         </>
     )
 }
+// NEEDS CSS
+
+//popup for DisplayCards
+function DropDownData ({ theSelectedId, dropDownIsOpen, setDropDownisOpen }) {  
+    const hideDropDown = () => {
+      setDropDownisOpen(false);
+    };
+  
+    // for when nothing is displayed yet
+    if (!dropDownIsOpen) return null;
+  
+    // incase theres a blank container
+    const dropDown = dropDownData.find(pdata => pdata.id === theSelectedId);
+  
+    if (!dropDown) return null; 
+  
+    return(
+      <>
+        <div className="DropDownWindow">
+          <button className="Hide" onClick={() => hideDropDown()}>X</button>
+          <h3 className="DropDownHeading">{dropDown.heading}</h3>
+          <p>{dropDown.text}</p>
+        </div>
+      </>
+  )}
 
 export default ItemList
