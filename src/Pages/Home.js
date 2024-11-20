@@ -97,7 +97,25 @@ export default function Home() {
 
           {/* Showcase past projects */}
           <div className="ShowCase">
-            
+            <h2>Links to web-applications:</h2>
+            <ul>
+              <li>
+                <a href="https://study-sphere-spa.netlify.app/" target="blank"> Study-Sphere</a>
+              </li>
+              <li>
+                <a href=" " target="blank">
+                  - Task management Web-applicaiton
+                </a>
+              </li>
+              <li>
+                <a href="https://e-commerce-project-e24b8.web.app/" target="blank">
+                  Hackathon - Ecolink - e-commerce project
+                </a>
+              </li>
+              <li>
+                
+              </li>
+            </ul>
           </div>
         </div>
       </div>
