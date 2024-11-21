@@ -299,9 +299,10 @@ p{
 }
 .ShowCase{
     display: grid;
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: auto auto ;
     justify-content: space-evenly;
     padding-bottom: 2rem;
+    background: linear-gradient(to right, #2ee002, #1440b9);
 }
 
 /* Links */
@@ -313,4 +314,7 @@ p{
 
     .LinkHeadings{
         text-align: center;
+        color: white;
+        text-decoration: underline;
+        padding: 1rem;
     }

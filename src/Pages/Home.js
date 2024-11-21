@@ -8,6 +8,7 @@ import ContactUs from "../Components/ContactUs";
 const userData = {
   name: 'Liam Rosenberg',
   age: '22',
+  workexperience: 'tutoring: 1 year',
   skills: [
     'Communication', 'Computer literate', 'Self-motivated', 'Punctual', 'Assertive', 'Research',
     'Time management', 'Planning', 'Team player', 'Analytical', 'English speaking',
@@ -51,9 +52,18 @@ export default function Home() {
           </div>
           <div className="BottomOfSideBar">
               <br/>
-              <h3>Age: {userData.age}</h3>
+                <h3>Age: {userData.age}</h3>
               <br/>
               <section className="SideNavText">
+                <h2 className="SubHeadings">Work Experience</h2>
+                <ul>
+                    <li>
+                      <h3 className="SubHeading">
+                        {userData.workexperience}
+                      </h3>
+                    </li>
+                  </ul>
+                  <br/>
                   <h2 className="SubHeadings">education</h2>
                   <ul>
                   {userData.education.map((items,index) => (
@@ -131,12 +141,12 @@ export default function Home() {
                 <img className="ImgWithLinks" src="https://i.postimg.cc/fb5V967j/Screenshot-2024-11-21-102404.png" alt="AFK" />
               </a>
             </div>
-            <div className="GridItem2">
+            {/* <div className="GridItem2">
               <h2 className="LinkHeadings">Task management Web-applicaiton</h2>
               <a className="LinkStyles" href="https://study-sphere-spa.netlify.app/" target="blank">
                 <img className="ImgWithLinks" src="https://i.postimg.cc/fb5V967j/Screenshot-2024-11-21-102404.png" alt="AFK" />
               </a>
-            </div>
+            </div> */}
             <div className="GridItem3">
               <h2 className="LinkHeadings">Hackathon - Ecolink - e-commerce project</h2>
               <a className="LinkStyles" href="https://e-commerce-project-e24b8.web.app/" target="blank">
