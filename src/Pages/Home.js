@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           {/* Showcase past projects */}
           <br/>
-          <h2 className="SubHeadings">A few Projects I've previously worked on:</h2>
+          <h2 className="SubHeadings">Links to previous projects that I've worked on:</h2>
           <br/>
           <div className="ShowCase">
             <div className="GridItem1">
