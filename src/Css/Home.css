@@ -1,7 +1,16 @@
-/* Global Reset */
 * {
     margin: 0;
     height: auto;
+}
+.SubHeadings{
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.SubHeading{
+    text-decoration: none;
+    left: 0;
 }
 
 /* Icons */
@@ -14,16 +23,17 @@
 /* Card styling */
 .Grid0 {
     width: auto;
-    height: 50rem;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 /* SideBar */
 .SideBar {
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: -20%;  /* Initially hidden off-screen */
-    width: 250px;
-    height: 100%;
+    left: -23.6%;  /* Initially hidden off-screen */
+    width: 20%;
+    height: auto;
     background-color: #333;
     color: white;
     padding: 2rem;
@@ -37,18 +47,39 @@
     left: 0; /* Slides in when open */
 }
 
-/* Sidebar Toggle Button */
+/*Toggle Buttons */
+/* Sidebar */
 .SidebarToggleBtn {
     position: fixed;
     top: 4%;
     left: 4%;
+
     background-color: #333;
     color: white;
+    font-size: 16px;
+
     border: none;
+    border-radius: 0.5rem;
+
     padding: 10px 20px;
     cursor: pointer;
+    z-index: 1100;
+    transition: left 0.3s ease;
+}
+.SidebarToggleBtn.open {
+    position: fixed;
+    top: 4%;
+    left: 25%;
+
+    background-color: #333;
+    color: white;
     font-size: 16px;
+
+    border: none;
     border-radius: 0.5rem;
+
+    padding: 10px 20px;
+    cursor: pointer;
     z-index: 1100;
 }
 
@@ -68,7 +99,6 @@
     scale:1.3;
 }
 
-
 /* Main Screen */
 .MainScreen {
     grid-column: 2;
@@ -77,9 +107,28 @@
 }
 
 .SideBar.open + .MainScreen {
-    margin-left: 20%; /* Make space for the sidebar */
+    margin-left: 23.5%; /* Make space for the sidebar */
 }
 
+/* ContactUs toggle btn */
+.ContactUsToggleBtn{
+    position: fixed;
+    top: 4%;
+    right: 4%;
+
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/*  */
 .MyStats {
     display: flex;
     flex-direction: column;
@@ -89,7 +138,7 @@
 .MainImg {
     position: relative;
     width: 100%;
-    height: 30rem;
+    height: 45rem;
     overflow: hidden;
 }
 
@@ -100,6 +149,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    scale: 1;
     z-index: -1;
 }
 
@@ -166,11 +216,14 @@
 
 .OverBackgroundImgText{
     color:white;
-    top: 20%;
-    left: 10%;
-    position: absolute;
+    top: 10%;
+
+    position: relative;
     z-index: 1100;
 
+    text-align: center;
+    font-size: 1.7rem;
+    text-decoration: underline;
 }
 
 .cards{
@@ -236,3 +289,23 @@ p{
     padding-left: 0.7rem;
     padding-right: 0.7rem;
 }
+.ImgWithLinks{
+    width:25rem;
+    height: 15rem;
+}
+.ShowCase{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    justify-content: space-evenly;
+}
+
+/* Links */
+    /* Entire link */
+    .LinkStyles{
+        display: flex;
+        justify-content: center;
+    }
+
+    .LinkHeadings{
+        text-align: center;
+    }

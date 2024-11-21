@@ -3,6 +3,7 @@ import "../Css/Home.css";
 import '../Components/Items';
 import ItemList from "../Components/Items";
 import DisplayCards from "../Components/DisplayCards";
+import ContactUs from "../Components/ContactUs";
 
 const userData = {
   name: 'Liam Rosenberg',
@@ -14,9 +15,9 @@ const userData = {
   hobbies: ['Chess', 'Gaming', 'Hikes', 'Drawing', 'Foody'],
   careerObj: 'Within the next 4 years I plan to expand my knowledge, understanding on a variety of areas in IT as well as business practices...',
   education: [
-    { institute: 'College of Cape Town (Crawford)', duration: '1 year', year: '', course: 'ODETDP' },
-    { institute: 'College of Cape Town (Crawford)', duration: '1 year', year: '', course: 'Cisco Networking' },
-    { institute: 'Plumstead high school', duration: '4 years', year: '', course: '' },
+    { institute: 'College of Cape Town (Crawford)', duration: '1 year', year: '2022-2023', course: 'ODETDP' },
+    { institute: 'College of Cape Town (Crawford)', duration: '1 year', year: '2021', course: 'Cisco Networking' },
+    { institute: 'Plumstead high school', duration: '4 years', year: '2016-2020', course: 'HighSchool' },
   ],
   experienceInSoftware: 'About 4 months',
   experience: [
@@ -27,10 +28,10 @@ const userData = {
 };
 
 export default function Home() {
-  // State to toggle the sidebar visibility
+  // State to toggle
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Toggle function for sidebar
+  // Toggle functions
   const toggleSidebar = () => {
     setIsSidebarOpen(prevState => !prevState);
   };
@@ -51,6 +52,30 @@ export default function Home() {
           <div className="BottomOfSideBar">
               <br/>
               <h3>Age: {userData.age}</h3>
+              <br/>
+              <section className="SideNavText">
+                  <h2 className="SubHeadings">education</h2>
+                  <ul>
+                  {userData.education.map((items,index) => (
+                    <li>
+                      <h3 className="SubHeading">
+                        {items.institute}
+                      </h3>
+                      <ul>
+                        <li key={index}>
+                          {items.course}
+                        </li>
+                        <li key={index}>
+                          {items.year}
+                        </li>
+                        <li key={index}>
+                          {items.duration}
+                        </li>
+                      </ul>
+                    </li>
+                  ))}
+                  </ul>
+              </section>
               <br/>
               <section className="SideNavText">
                   <h2 className="SubHeadings">Skills</h2>
@@ -74,16 +99,17 @@ export default function Home() {
 
         <div className="MainScreen">
           <div className="MainImg">
-              <button
-                  className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
-                  onClick={toggleSidebar}
-              >
-                  {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
-              </button>
-            <img className="BackgroundImg" src="https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg" alt="" />
-            <div className="OverBackgroundImgText">
+            <div className="OverBackgroundImgText" >
               <h1><strong>Welcome to {userData.name}'s Portfolio</strong></h1>
             </div>
+            <button
+              className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
+              onClick={toggleSidebar}
+            >
+            {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
+              </button>
+              <ContactUs/>
+            <img className="BackgroundImg" src="https://i.postimg.cc/hjCtXc0V/gk4cplcv63v61.webp" alt="" />
           </div>
           {/* Display cards section */}
           <div className="Grid1">
@@ -94,28 +120,29 @@ export default function Home() {
           <div className="SlideShow">
             <ItemList />
           </div>
-
           {/* Showcase past projects */}
+          <br/>
+          <h2 className="SubHeadings">A few Projects I've previously worked on:</h2>
+          <br/>
           <div className="ShowCase">
-            <h2>Links to web-applications:</h2>
-            <ul>
-              <li>
-                <a href="https://study-sphere-spa.netlify.app/" target="blank"> Study-Sphere</a>
-              </li>
-              <li>
-                <a href=" " target="blank">
-                  - Task management Web-applicaiton
-                </a>
-              </li>
-              <li>
-                <a href="https://e-commerce-project-e24b8.web.app/" target="blank">
-                  Hackathon - Ecolink - e-commerce project
-                </a>
-              </li>
-              <li>
-                
-              </li>
-            </ul>
+            <div className="GridItem1">
+              <h2 className="LinkHeadings">Study-Sphere</h2>
+              <a className="LinkStyles" href="https://study-sphere-spa.netlify.app/" target="blank">
+                <img className="ImgWithLinks" src="https://i.postimg.cc/fb5V967j/Screenshot-2024-11-21-102404.png" alt="AFK" />
+              </a>
+            </div>
+            <div className="GridItem2">
+              <h2 className="LinkHeadings">Task management Web-applicaiton</h2>
+              <a className="LinkStyles" href="https://study-sphere-spa.netlify.app/" target="blank">
+                <img className="ImgWithLinks" src="https://i.postimg.cc/fb5V967j/Screenshot-2024-11-21-102404.png" alt="AFK" />
+              </a>
+            </div>
+            <div className="GridItem3">
+              <h2 className="LinkHeadings">Hackathon - Ecolink - e-commerce project</h2>
+              <a className="LinkStyles" href="https://e-commerce-project-e24b8.web.app/" target="blank">
+                <img className="ImgWithLinks" src="https://i.postimg.cc/pXxYKtz3/image-2024-11-21-105312861.png" alt="AFK" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

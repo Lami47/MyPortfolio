@@ -52,6 +52,13 @@ const ItemList = () => {
 
     return(
         <>
+        {/* selector */}
+
+        {/* title */}
+        {/* img */}
+
+        {/* text - overview of the project- problem, solution and what i contributed */}
+
             <div className="ItemsGrid0">
                 <div className="Card1">
                     <button className="CardBtns" onClick={goBackOneItem}>Back</button>
@@ -99,7 +106,11 @@ function DropDownData ({ theSelectedId, dropDownIsOpen, setDropDownIsOpen }) {
     return(
       <>
         <div className={`DropDownWindow ${dropDownIsOpen ? 'show' : ''}`}>
-          <button className="Hide" onClick={hideDropDown}>X</button>
+          <button 
+            className="Hide" 
+            onClick={hideDropDown}>
+            X
+        </button>
           <div className="DropDownHeading">
             <h3>{dropDown.title}</h3>
           </div>

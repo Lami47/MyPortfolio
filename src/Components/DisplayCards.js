@@ -44,10 +44,8 @@ function PopUpBtn ({ selectedId, isPopupOpen, setPopupOpen }) {
     setPopupOpen(false);
   };
 
-  // for when nothing is displayed yet
   if (!isPopupOpen) return null;
 
-  // incase theres a blank container
   const popup = popupData.find(pdata => pdata.id === selectedId);
 
   if (!popup) return null; 
