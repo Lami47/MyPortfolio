@@ -8,7 +8,10 @@ import ContactUs from "../Components/ContactUs";
 const userData = {
   name: 'Liam Rosenberg',
   age: '22',
-  workexperience: 'tutoring: 1 year',
+  workexperience: [
+    {posititon: 'Software Developing Intern',start:'Aug 2024',end:'Current',duration: 'Ongoing'},
+    {posititon: 'Tutor',start:'Aug 2023',end:'Nov 2024',duration: '1 year'},
+  ],
   skills: [
     'Communication', 'Computer literate', 'Self-motivated', 'Punctual', 'Assertive', 'Research',
     'Time management', 'Planning', 'Team player', 'Analytical', 'English speaking',
@@ -57,11 +60,24 @@ export default function Home() {
               <section className="SideNavText">
                 <h2 className="SubHeadings">Work Experience</h2>
                 <ul>
+                {userData.workexperience.map((items,index) => (
                     <li>
                       <h3 className="SubHeading">
-                        {userData.workexperience}
+                      {items.posititon}
                       </h3>
+                      <ul>
+                        <li key={index}>
+                          Start: {items.start}
+                        </li>
+                        <li key={index}>
+                          End: {items.end}
+                        </li>
+                        <li key={index}>
+                          Duration: {items.duration}
+                        </li>
+                      </ul>
                     </li>
+                  ))}
                   </ul>
                   <br/>
                   <h2 className="SubHeadings">education</h2>
