@@ -2,7 +2,7 @@ import '../Css/ContactUs.css'
 import { useState } from 'react';
 
 export default function ContactUs(){
-    const [isContactUsOpen, setContactUsOpen] = useState(true);
+    const [isContactUsOpen, setContactUsOpen] = useState(false);
 
     const handleTheButtonClick = () => {
       setContactUsOpen(prevState => !prevState); // Toggle the form open/close state
@@ -11,7 +11,7 @@ export default function ContactUs(){
     return(
     <>
         <button className={`ContactUsToggleBtn ${isContactUsOpen? 'open' : ''}`} onClick={() => handleTheButtonClick()}>
-            {isContactUsOpen? 'Close' : 'Open'}
+            {isContactUsOpen? 'Close Contact us' : 'Contact us'}
         </button>
         {isContactUsOpen && <ContactForm setContactUsOpen={setContactUsOpen} />}
     </>
@@ -92,8 +92,8 @@ function ContactForm({setContactUsOpen}){
                             required
                         />
                     </div>
-                    <div className='form'>
-                        <button className='form' type="submit" onClick={() => closeContactUs()}>Submit</button>
+                    <div className='divBtn'>
+                        <button className='formBtn' type="submit" onClick={() => closeContactUs()}>Submit</button>
                     </div>
                 </form>
                 {message && <p className='form'>{message}</p>}

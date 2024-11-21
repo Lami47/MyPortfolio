@@ -2,6 +2,7 @@
     margin: 0;
     height: auto;
 }
+
 .SubHeadings{
     text-transform: capitalize;
     text-decoration: underline;
@@ -31,7 +32,7 @@
 .SideBar {
     position: absolute;
     top: 0;
-    left: -23.6%;  /* Initially hidden off-screen */
+    left: -23.4%;  /* Initially hidden off-screen */
     width: 20%;
     height: auto;
     background-color: #333;
@@ -107,7 +108,7 @@
 }
 
 .SideBar.open + .MainScreen {
-    margin-left: 23.5%; /* Make space for the sidebar */
+    margin-left: 23.4%; /* Make space for the sidebar */
 }
 
 /* ContactUs toggle btn */
@@ -164,9 +165,11 @@
 }
 
 /* Grid 1 */
-.Grid1 {
+.Exp{
     border: 1px solid black;
+
     height: 5rem;
+
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
@@ -189,6 +192,8 @@
 /* SlideShow */
 .SlideShow {
     color: black;
+    background: radial-gradient(circle, white, rgb(111, 235, 152));
+
     width: 100%;
 }
 

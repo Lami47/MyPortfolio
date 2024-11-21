@@ -2,7 +2,17 @@ import React, {useState, useEffect } from "react";
 import '../Css/Items.css';
 
 const items = [
-    {id: 1, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: 'Past Projects', text: 'total of 3 projects',alt:''},
+    {id: 1,
+    imageSrc: [
+        'https://i.postimg.cc/vHBdzDRV/Screenshot-2024-11-21-102404.png',
+        'https://i.postimg.cc/hP5R3gg3/Screenshot-2024-11-21-130005.png',
+        'https://i.postimg.cc/v8XsffKy/Screenshot-2024-11-21-130019.png',
+        'https://i.postimg.cc/8cygGgvc/Screenshot-2024-11-21-130030.png',
+        'https://i.postimg.cc/g2LFC52c/Screenshot-2024-11-21-130109.png'
+    ],
+    title: 'Past Projects', //displays the title above the img
+    text: 'total of 3 projects', //displays the text 
+    alt:''},
     {id: 2, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
     {id: 3, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},
     {id: 4, imageSrc: 'https://i.postimg.cc/Bnyfd5LV/OIP-6.jpg', title: '', text: '',alt:''},

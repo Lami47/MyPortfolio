@@ -112,7 +112,7 @@ export default function Home() {
             <img className="BackgroundImg" src="https://i.postimg.cc/hjCtXc0V/gk4cplcv63v61.webp" alt="" />
           </div>
           {/* Display cards section */}
-          <div className="Grid1">
+          <div className="Exp">
               <DisplayCards />
           </div>
           {/* slideshow with brief summary of the websites and what i contributed */}

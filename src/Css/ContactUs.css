@@ -4,7 +4,7 @@
     align-items: center;
 
     position: relative;
-    top: 30%;
+    top: 16%;
 
     z-index: 1000;
 }
@@ -16,7 +16,8 @@
 
     border:1px solid white;
     border-radius: 3rem;
-    width: 40%;
+    width: 30%;
+    padding: 1rem;
 
     background-color: white;
 
@@ -28,6 +29,8 @@ form {
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+
+    box-shadow: 0.4rem 0.6rem 1.2rem 0.3rem rgb(34, 32, 32);
 }
 
 form div {
@@ -48,7 +51,7 @@ textarea {
   border-radius: 4px;
 }
 
-.form button {
+.formBtn {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -56,7 +59,7 @@ textarea {
     border-radius: 4px;
     cursor: pointer;
 }
-.form button:hover {
+.formBtn:hover {
     background-color: #45a049;
 }
 
@@ -78,4 +81,10 @@ textarea {
     font-size: 1.5rem;
     
     border-radius: 2rem;
+}
+
+.divBtn{
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
 }
