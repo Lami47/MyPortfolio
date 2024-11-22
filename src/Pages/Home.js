@@ -141,6 +141,7 @@ export default function Home() {
                 <img className="ImgWithLinks" src="https://i.postimg.cc/fb5V967j/Screenshot-2024-11-21-102404.png" alt="AFK" />
               </a>
             </div>
+            {/* Need to deploy  */}
             {/* <div className="GridItem2">
               <h2 className="LinkHeadings">Task management Web-applicaiton</h2>
               <a className="LinkStyles" href="https://study-sphere-spa.netlify.app/" target="blank">
@@ -153,6 +154,7 @@ export default function Home() {
                 <img className="ImgWithLinks" src="https://i.postimg.cc/pXxYKtz3/image-2024-11-21-105312861.png" alt="AFK" />
               </a>
             </div>
+            {/* need to deploy the python project */}
           </div>
         </div>
       </div>
