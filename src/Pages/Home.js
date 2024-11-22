@@ -4,6 +4,7 @@ import '../Components/Items';
 import ItemList from "../Components/Items";
 import DisplayCards from "../Components/DisplayCards";
 import ContactUs from "../Components/ContactUs";
+import Languages from "../Components/Languages";
 
 const userData = {
   name: 'Liam Rosenberg',
@@ -124,6 +125,16 @@ export default function Home() {
           {/* Display cards section */}
           <div className="Exp">
               <DisplayCards />
+          </div>
+          <div>
+            <div>
+                {/* languages ik */}
+                <Languages/>
+            </div>
+              
+                  
+            {/* my certificates */}
+            
           </div>
           {/* slideshow with brief summary of the websites and what i contributed */}
           {/* About me description */}
