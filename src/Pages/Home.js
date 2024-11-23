@@ -140,7 +140,6 @@ export default function Home() {
             {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
               </button>
               <ContactUs/>
-            <img className="BackgroundImg" src="https://i.postimg.cc/hjCtXc0V/gk4cplcv63v61.webp" alt="" />
           </div>
           {/* Display cards section */}
           <div className="Exp">
