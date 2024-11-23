@@ -60,6 +60,7 @@ export default function Home() {
               <br/>
               <section className="SideNavText">
                 <h2 className="SubHeadings">Work Experience</h2>
+                <br/>
                 <ul>
                 {userData.workexperience.map((items,index) => (
                     <li>
@@ -76,12 +77,14 @@ export default function Home() {
                         <li key={index}>
                           Duration: {items.duration}
                         </li>
+                        <br/>
                       </ul>
                     </li>
                   ))}
                   </ul>
                   <br/>
                   <h2 className="SubHeadings">education</h2>
+                  <br/>
                   <ul>
                   {userData.education.map((items,index) => (
                     <li>
@@ -98,6 +101,7 @@ export default function Home() {
                         <li key={index}>
                           {items.duration}
                         </li>
+                        <br/>
                       </ul>
                     </li>
                   ))}
