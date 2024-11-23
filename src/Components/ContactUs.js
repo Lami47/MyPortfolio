@@ -20,6 +20,7 @@ export default function ContactUs(){
 
 function ContactForm({setContactUsOpen}){
     const closeContactUs = () => {
+        alert("Your message was successfully sent!")
         setContactUsOpen(false);
       };
 
