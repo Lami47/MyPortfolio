@@ -1,23 +1,18 @@
 .ItemsGrid0 {
     display: grid;
-    grid-template-columns: auto auto auto;
+    flex-direction: column;
+    grid-template-columns: auto;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: 100%;
 }
-.Card1{
-    grid-column: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Card2 {
-    display: flex;
-    grid-column: 3;
-    justify-content: center;
-    align-items: center;
 
-    width: 50%;
+.Card1{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    justify-content: space-evenly;
 }
 
 .Cards {
@@ -25,9 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-
-    
+    width: 100%;  
 }
 
 .ItemCard {
@@ -120,4 +113,47 @@
     background-color: rgb(238, 208, 208);
     border: 1px dashed black;
     padding: 2rem;
+}
+
+@media (max-width: 1060px) {
+    .ItemsGrid0{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ItemCards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Card1{
+        width: 100%;
+        height: 5rem;
+        justify-content: space-evenly;
+    }
+    .CardBtn{
+        width: 90%;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-image{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-describtion{
+        padding-bottom: 1rem;
+    }
+    .itemDescribtionText{
+        font-size: 1.2rem;
+        width: 90%;
+        padding: 1.5rem;
+    }
+
 }

@@ -99,12 +99,7 @@ const ItemList = () => {
         </div>
 
         {selectedItem && (
-            <div className="ItemsGrid0">
-            <div className="Card1">
-                <button className="CardBtns" onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + items[0].imageSrc.length) % items[0].imageSrc.length)}>
-                Back
-                </button>
-            </div>
+          <div className="ItemsGrid0">
             <div className="Cards">
                 <div className="Grid-section-1">
                     <h2 className="item-title">{selectedItem.title}</h2>
@@ -128,12 +123,18 @@ const ItemList = () => {
                     )}
                     
             </div>
-            <div className="Card2">
+            <div className="Card1">
+                <button 
+                    className="CardBtns" 
+                    onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + items[0].imageSrc.length) % items[0].imageSrc.length)}
+                >
+                    Back
+                </button>
                 <button 
                     className="CardBtns" 
                     onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % items[0].imageSrc.length)}
-                    >
-                        Next
+                >
+                    Next
                 </button>
             </div>
         </div>

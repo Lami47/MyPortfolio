@@ -25,7 +25,7 @@ export default function Languages(){
     return(
         <>
             <div className='LanguageContainer'>
-                <h2 className='HeadingText'>Click on the icons to see my Certificates<br/><em>Ps. Html and Css has no certificates..</em></h2>
+                <h2 className='HeadingText'>Click on the icons to see my Certificates<br/><em>Ps. Html and Css has no certificates</em></h2>
                 <div className="LanguagesGrid0">
                     {Language.slice(0, 3).map((lang, index) => (
                         <div key={index} className="LangCard">

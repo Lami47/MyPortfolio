@@ -16,7 +16,7 @@
 
 /* Icons */
 .Icon {
-    width: 60%;
+    width: 9rem;
     height: 80%;
     border-radius: 5rem;
 }
@@ -53,7 +53,7 @@
 .SidebarToggleBtn {
     position: fixed;
     top: 4%;
-    left: 4%;
+    right: 4%;
 
     background-color: #333;
     color: white;
@@ -70,7 +70,7 @@
 .SidebarToggleBtn.open {
     position: fixed;
     top: 4%;
-    left: 25%;
+    right: 4%;
 
     background-color: #333;
     color: white;
@@ -114,8 +114,8 @@
 /* ContactUs toggle btn */
 .ContactUsToggleBtn{
     position: fixed;
-    top: 4%;
-    right: 4%;
+    top: 80%;
+    right: 10%;
 
     background-color: #333;
     color: white;
@@ -222,9 +222,10 @@
 .OverBackgroundImgText{
     color:white;
     top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
 
     position: relative;
-    z-index: 1100;
 
     text-align: center;
     font-size: 1.7rem;
@@ -335,7 +336,13 @@ p{
     }
 
 /* Responsive layout for smaller screens */
-@media (max-width: 720px) {
+@media (max-width: 1060px) {
+    .Grid0 {
+        width: 100%;
+        height: auto;
+        background-color: teal;
+        /* overflow-x: hidden; */
+    }
     /* Make the sidebar take up the entire width of the screen when opened */
     .SideBar {
         position: fixed;
@@ -345,6 +352,9 @@ p{
         height: 100%;
         transition: transform 0.3s ease-in-out;
         transform: translateX(-100%);
+
+        justify-content: center;
+        align-items: center;
     }
 
     .SideBar.open {
@@ -356,17 +366,21 @@ p{
         margin-left: 0;
     }
 
+    /*  */
+
     /* Sidebar toggle button should be at the top of the screen */
     .SidebarToggleBtn {
-        top: 4%;
+        top: 20%;
         left: 4%;
         position: fixed;
         z-index: 1100;
+        width: 9rem;
     }
 
     /* Display the sidebar toggle button differently on small screens */
     .SidebarToggleBtn.open {
-        left: 80%;
+        top: 20%;
+        right: 4%;
     }
 
     /* Adjust the main content area to take full width when sidebar is open */
@@ -376,11 +390,87 @@ p{
 
     /* Improve accessibility for small screens */
     .MainImg {
-        height: 30rem; /* Adjust image height on smaller screens */
+        height: auto; /* Adjust image height on smaller screens */
     }
 
     .Exp {
-        display: block; /* Stack the elements vertically */
+        display: flex; /* Stack the elements vertically */
         width: 100%;
     }
+    .OverBackgroundImgText{
+        position: relative;
+        font-size: 100%;
+        height:15rem
+    }
+    .OverBackgroundImgText h1{
+        font-size: 100%;
+    }
+
+    /*  */
+    .ShowCase{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    /*  */
+    .PopUpWindow{
+        border: 1px solid black;
+        border-radius: 3rem;
+    
+        background-color: white;
+        color: black;
+        font-size: 1.2rem;
+        text-align: center;
+    
+        width: 60%;
+        height: auto;
+        padding: 2rem;
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+    .PopUpHeading{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        text-align: center;
+        text-decoration: underline;
+    
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+    
+    p{
+        text-align: center;
+        font-size: 1.3rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .CloseBtn{
+        font-size: 1.2rem;
+    
+        z-index: 1000;
+        position: absolute;
+        top: 5%;
+        right: 3%;
+
+        border-radius: 2rem;
+        padding: 0.4rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        background-color: white;
+    }
+    /* Links to past code */
+    .ImgWithLinks{
+        width: 20rem;
+        height: 15rem;
+    }
 }
+

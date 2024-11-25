@@ -113,3 +113,35 @@
 .close-popup:hover {
     background: darkred;
 }
+
+@media (max-width: 1060px) {
+    .LanguagesGrid0{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-evenly;
+        gap: 7rem;
+        width: 100%;
+        left: 0; 
+        margin-bottom: 3rem;
+    }
+    .HeadingText{
+        font-size: 1.2rem;
+        text-align: center;
+        color: white;
+        margin-bottom: 2rem
+    }
+    .LanguagesGrid1{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-evenly;
+        gap: 7rem;
+        width: 70%; 
+        margin-bottom: 3rem;
+    }
+    .LangIcon{
+        width: 12rem;
+        height: auto;
+        border-radius: 3rem;
+    }
+
+}

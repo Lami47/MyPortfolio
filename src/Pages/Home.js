@@ -17,7 +17,7 @@ const userData = {
     'Communication', 'Computer literate', 'Self-motivated', 'Punctual', 'Assertive', 'Research',
     'Time management', 'Planning', 'Team player', 'Analytical', 'English speaking',
   ],
-  hobbies: ['Chess', 'Gaming', 'Hikes', 'Drawing', 'Foody'],
+  hobbies: ['Chess', 'Gaming', 'Hiking', 'Drawing', 'Cooking'],
   careerObj: 'Within the next 4 years I plan to expand my knowledge, understanding on a variety of areas in IT as well as business practices...',
   education: [
     { institute: 'College of Cape Town (Crawford)', duration: '1 year', year: '2022-2023', course: 'ODETDP' },
@@ -131,7 +131,9 @@ export default function Home() {
         <div className="MainScreen">
           <div className="MainImg">
             <div className="OverBackgroundImgText" >
-              <h1><strong>Welcome to {userData.name}'s Portfolio</strong></h1>
+              <h1><strong>Welcome to</strong></h1>
+              <br/>
+              <h1><strong>{userData.name}'s Portfolio</strong></h1>
             </div>
             <button
               className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
