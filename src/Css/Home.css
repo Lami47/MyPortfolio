@@ -337,24 +337,27 @@ p{
 
 /* Responsive layout for smaller screens */
 @media (max-width: 1060px) {
+    * {
+        margin: 0;
+        height: auto;
+    }
     .Grid0 {
         width: 100%;
         height: auto;
         background-color: teal;
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
     /* Make the sidebar take up the entire width of the screen when opened */
     .SideBar {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 20rem;
         height: 100%;
         transition: transform 0.3s ease-in-out;
         transform: translateX(-100%);
-
-        justify-content: center;
-        align-items: center;
+        overflow-y: auto;
+        
     }
 
     .SideBar.open {
@@ -367,7 +370,7 @@ p{
     }
 
     /*  */
-
+    
     /* Sidebar toggle button should be at the top of the screen */
     .SidebarToggleBtn {
         top: 20%;
@@ -381,6 +384,7 @@ p{
     .SidebarToggleBtn.open {
         top: 20%;
         right: 4%;
+        background-color: black;
     }
 
     /* Adjust the main content area to take full width when sidebar is open */
@@ -400,10 +404,10 @@ p{
     .OverBackgroundImgText{
         position: relative;
         font-size: 100%;
-        height:15rem
+        height:15rem;
     }
     .OverBackgroundImgText h1{
-        font-size: 100%;
+        font-size: 1.8rem;
     }
 
     /*  */
@@ -471,6 +475,9 @@ p{
     .ImgWithLinks{
         width: 20rem;
         height: 15rem;
+    }
+    .SideNavText{
+        margin-bottom: 3rem;
     }
 }
 
