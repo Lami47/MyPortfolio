@@ -62,6 +62,7 @@
     font-size: 1.2rem;
     border-radius: 3rem;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .dropdown-menu {
@@ -78,6 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .dropdown-menu-items:hover{
     background-color: grey;
