@@ -139,7 +139,7 @@ export default function Home() {
               className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
               onClick={toggleSidebar}
             >
-            {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
+            {isSidebarOpen ? <img className="sideNavIcon" src="https://i.postimg.cc/76STbZjY/12252572.png"/> : <img className="sideNavIcon" src="https://i.postimg.cc/q7P3k3b5/12252287.png"/>}
               </button>
               <ContactUs/>
           </div>

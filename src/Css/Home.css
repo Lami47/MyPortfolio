@@ -20,7 +20,9 @@
     height: 80%;
     border-radius: 5rem;
 }
-
+.sideNavIcon{
+    width: 100%;
+}
 /* Card styling */
 .Grid0 {
     width: auto;
@@ -62,10 +64,13 @@
     border: none;
     border-radius: 0.5rem;
 
-    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     z-index: 1100;
     transition: left 0.3s ease;
+    height: 3rem;
 }
 .SidebarToggleBtn.open {
     position: fixed;
@@ -79,7 +84,6 @@
     border: none;
     border-radius: 0.5rem;
 
-    padding: 10px 20px;
     cursor: pointer;
     z-index: 1100;
 }
@@ -373,6 +377,7 @@ p{
     .SideBar.open {
         transform: translateX(0);
     }
+    
 
     /* Adjust the main content's margin to make space for the sidebar */
     .MainScreen {
@@ -409,17 +414,18 @@ p{
     }
     /* Sidebar toggle button should be at the top of the screen */
     .SidebarToggleBtn {
-        top: 1%;
-        right: 4%;
+        top: 6%;
+        right: 6%;
         position: fixed;
         z-index: 1100;
-        width: 9rem;
+        width: 3rem;
     }
 
     /* Display the sidebar toggle button differently on small screens */
     .SidebarToggleBtn.open {
-        top: 1%;
-        right: 4%;
+        top: 6%;
+        right: 6%;
+        width: 3rem;
         background-color: white;
         color: black;
     }
@@ -427,6 +433,14 @@ p{
     /* Adjust the main content area to take full width when sidebar is open */
     .SideBar.open + .MainScreen {
         margin-left: 0;
+    }
+    .sideNavIcon{
+        width: 2rem;
+        height: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     /* Improve accessibility for small screens */
