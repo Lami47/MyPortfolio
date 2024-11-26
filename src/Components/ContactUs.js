@@ -47,13 +47,13 @@ function ContactForm({setContactUsOpen}){
 
     const [state, handleSubmit] = useForm("xzzbjbll");
     if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
+        return;
     };
     const handleSubmits = (event) => {
         event.preventDefault(); 
-
+        // validates
         handleContact(event);
-
+        // sends email via formspree
         handleSubmit(event);
     };
     return(
@@ -107,6 +107,7 @@ function ContactForm({setContactUsOpen}){
                         <button 
                             className='formBtn'
                             type="submit" 
+                            disabled={state.submitting}
                             >
                             Submit
                         </button>

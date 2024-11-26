@@ -114,6 +114,10 @@
 .SideBar.open + .MainScreen {
     margin-left: 23.4%; /* Make space for the sidebar */
 }
+.sideNavIcon{
+    width: 3rem;
+    height: 3rem;
+}
 
 /* ContactUs toggle btn */
 .ContactUsToggleBtn{
