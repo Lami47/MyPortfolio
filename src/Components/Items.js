@@ -52,11 +52,18 @@ const ItemList = () => {
     const [currentIndex, setCurrentIndex] = useState(0); 
     const [theSelectedId, setSelectedId] = useState(null); 
     const [dropDownIsOpen, setDropDownIsOpen] = useState(false);
+    const [isItemVisible, setIsItemVisible] = useState(false);
 
     const handleButtonClick = (id) => {
         setSelectedId(id);
         setDropDownIsOpen(false);
+        setIsItemVisible(true);
       };
+    const handleClose = () => {
+      setDropDownIsOpen(false); // Close the dropdown
+      setIsItemVisible(false); // Hide item details
+      setSelectedId(null); // Clear selected item
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -89,7 +96,11 @@ const ItemList = () => {
             {dropDownIsOpen && (
                 <div className="dropdown-menu">
                 {items.map((item) => (
-                    <div className="dropdown-menu-items" key={item.id} onClick={() => handleButtonClick(item.id)}>
+                    <div 
+                      className="dropdown-menu-items" 
+                      key={item.id} 
+                      onClick={() => handleButtonClick(item.id)}
+                      >
                     {item.title || `Project ${item.id}`}
                     </div>
                 ))}
@@ -97,8 +108,11 @@ const ItemList = () => {
             )}
             </div>
         </div>
+        <button className="CloseItems" onClick={handleClose}>
+          Close
+        </button>
 
-        {selectedItem && (
+        {selectedItem && isItemVisible && (
           <div className="ItemsGrid0">
             <div className="Cards">
                 <div className="Grid-section-1">

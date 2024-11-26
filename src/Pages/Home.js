@@ -149,7 +149,6 @@ export default function Home() {
           </div>
           <div>
             <div>
-                {/* languages ik */}
                 <Languages/>
             </div>
               
@@ -173,13 +172,6 @@ export default function Home() {
                 <img className="ImgWithLinks" src="https://i.postimg.cc/fb5V967j/Screenshot-2024-11-21-102404.png" alt="AFK" />
               </a>
             </div>
-            {/* Need to deploy  */}
-            {/* <div className="GridItem2">
-              <h2 className="LinkHeadings">Task management Web-applicaiton</h2>
-              <a className="LinkStyles" href="https://study-sphere-spa.netlify.app/" target="blank">
-                <img className="ImgWithLinks" src="https://i.postimg.cc/fb5V967j/Screenshot-2024-11-21-102404.png" alt="AFK" />
-              </a>
-            </div> */}
             <div className="GridItem3">
               <h2 className="LinkHeadings">Hackathon - Ecolink - e-commerce project</h2>
               <a className="LinkStyles" href="https://e-commerce-project-e24b8.web.app/" target="blank">
