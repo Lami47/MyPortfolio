@@ -144,7 +144,7 @@ export default function Home() {
               <ContactUs/>
           </div>
           {/* Display cards section */}
-          <div className="Exp">
+          <div className="exp">
               <DisplayCards />
           </div>
           <div>

@@ -26,9 +26,11 @@ function DisplayCards () {
   return (
     <>
       {QueCards.map(btn => (
-      <button key={btn.id} className="cards" onClick={() => handleButtonClick(btn.id)}>
-        {btn.text}
-      </button>
+      <div className="Exp">
+          <button key={btn.id} className="cards" onClick={() => handleButtonClick(btn.id)}>
+            {btn.text}
+          </button>
+      </div>
       ))}
       <PopUpBtn 
         selectedId={selectedId}
