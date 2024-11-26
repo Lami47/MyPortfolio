@@ -1,6 +1,6 @@
 import '../Css/ContactUs.css'
 import { useState } from 'react';
-import { ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function ContactUs(){
     const [isContactUsOpen, setContactUsOpen] = useState(false);
@@ -20,12 +20,6 @@ export default function ContactUs(){
 }
 
 function ContactForm({setContactUsOpen}){
-    const closeContactUs = () => {
-        alert("Your message was successfully sent!")
-        setContactUsOpen(false);
-    };
-
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
@@ -49,7 +43,19 @@ function ContactForm({setContactUsOpen}){
 
     const handleTheButtonClick = () => {
         setContactUsOpen(prevState => !prevState); // Toggle the form open/close state
-      };
+    };
+
+    const [state, handleSubmit] = useForm("xzzbjbll");
+    if (state.succeeded) {
+        return <p>Thanks for joining!</p>;
+    };
+    const handleSubmits = (event) => {
+        event.preventDefault(); 
+
+        handleContact(event);
+
+        handleSubmit(event);
+    };
     return(
     <>
         <div className='formMainBox'>
@@ -57,7 +63,7 @@ function ContactForm({setContactUsOpen}){
                 <h2 className='formTitle'> Contact Us </h2>
                 <button className='closeForm' onClick={handleTheButtonClick}>X</button>
                 <form 
-                onSubmit={handleContact}>
+                onSubmit={handleSubmits}>
                     <label htmlFor="name">
                         Name
                     </label>
