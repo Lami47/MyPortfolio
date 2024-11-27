@@ -9,7 +9,7 @@ export default function Languages(){
         {language: 'CSS', src: 'https://i.postimg.cc/8cv8SjhC/OIP-1.jpg',link:''},
         {language: 'JavaScript', src: 'https://i.postimg.cc/9fXj7Xjx/JS.jpg',link:'https://i.postimg.cc/V6QNSGwf/JS-certificate.png'},
         {language: 'Python', src: 'https://i.postimg.cc/XJpSs2qd/69-python-34cfd522d6.jpg',link:'https://i.postimg.cc/3Nnh899x/Python.png'},
-        {language: 'Java', src: 'https://i.postimg.cc/prhGF4Tc/java.jpg',link:'https://i.postimg.cc/qMMvC6P3/Java.png'}
+        {language: 'Java', src: 'https://i.postimg.cc/prhGF4Tc/java.jpg',link:'https://i.postimg.cc/wMSqd9fh/image-2024-11-27-165341965.png'}
     ]
 
     const handleImageClick = (link) => {
