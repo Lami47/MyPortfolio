@@ -38,6 +38,7 @@
     color: white;
     padding: 1rem;
     border-radius: 3rem;
+    transition: 0.3s ease-in-out;
 }
 .LangIconAround{
 
@@ -113,6 +114,16 @@
 
 .close-popup:hover {
     background: darkred;
+}
+#Lang1, #Lang2:hover{
+    cursor: auto;
+}
+.LangCard:hover{
+    transition: 0.4s ease-in-out;
+    scale: 1.2;
+}
+#Langs1:hover, #Langs2:hover{
+    scale:1;
 }
 
 @media (max-width: 1060px) {

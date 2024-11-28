@@ -46,11 +46,6 @@ form div {
     margin-bottom: 15px;
 }
 
-.form label {
-    display: block;
-    margin-bottom: 1rem;
-}
-
 input,
 textarea {
   width: 90%;
@@ -102,6 +97,12 @@ textarea {
     display: flex;
     justify-content: center;
     padding: 10px 15px;
+}
+.FormLabel{
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-self: center;
 }
 
 @media(max-width: 1060px){

@@ -65,7 +65,7 @@ function ContactForm({setContactUsOpen}){
                 <form 
                 className='formContainer'
                 onSubmit={handleSubmits}>
-                    <label htmlFor="name">
+                    <label className='FormLabel' htmlFor="name">
                         Name
                     </label>
                     <input
@@ -73,19 +73,21 @@ function ContactForm({setContactUsOpen}){
                         type="text" 
                         name="name"
                         value={name}
+                        placeholder='John Doe / Smitty'
                         onChange={(e) => setName(e.target.value)}
                     />
                     <ValidationError 
                         prefix="Name" 
                         field="name"
                     />
-                    <label htmlFor="email">
+                    <label className='FormLabel' htmlFor="email">
                         Email Address
                     </label>
                     <input
                         id="email"
                         type="email" 
                         name="email"
+                        placeholder='example@gmail.com'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
@@ -93,9 +95,14 @@ function ContactForm({setContactUsOpen}){
                         prefix="Email" 
                         field="email"
                     />
+                    <label className='FormLabel' htmlFor="Comment">
+                        Comment
+                    </label>
                     <textarea
                         id="comment"
+                        type='text'
                         name="comment"
+                        placeholder=''
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
                     />

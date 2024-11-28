@@ -31,21 +31,6 @@ const items = [
     link:"https://e-commerce-project-e24b8.web.app/",
     alt: "",
   },
-//   {
-//     id: 3,
-//     imageSrc: [
-//       "https://i.postimg.cc/yx0ZxBB1/Screenshot-2024-11-21-151327.png",
-//       "https://i.postimg.cc/HWM5B0Mq/Screenshot-2024-11-21-151500.png",
-//       "https://i.postimg.cc/HsCMKJ4V/Screenshot-2024-11-21-151520.png",
-//       "https://i.postimg.cc/XYsypsMC/Screenshot-2024-11-21-151533.png",
-//       "https://i.postimg.cc/yYXRzVvn/Screenshot-2024-11-21-151546.png",
-//       "https://i.postimg.cc/RZSHSjYm/Screenshot-2024-11-21-151708.png",
-//     ],
-//     title: "Eco-Link",
-//     text: "total of 2 projects",
-//     link:"https://e-commerce-project-e24b8.web.app/",
-//     alt: "",
-//   },
 ];
 
 const ItemList = () => {
@@ -127,11 +112,13 @@ const ItemList = () => {
                     {imagesToDisplay.map((image, index) => (
                     <div className="ItemCard" key={index}>
                         <div className="CardImg">
-                        <img
-                            className="item-image"
-                            src={image}
-                            alt={selectedItem.alt || `Image ${currentIndex + 1}`}
-                        />
+                          <a href={selectedItem.link} target="blank">
+                            <img
+                                className="item-image"
+                                src={image}
+                                alt={selectedItem.alt || `Image ${currentIndex + 1}`}
+                            />
+                          </a>
                         </div>
                     </div>
                     ))}

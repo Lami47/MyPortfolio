@@ -56,7 +56,7 @@
 /* Sidebar */
 .SidebarToggleBtn {
     position: fixed;
-    top: 4%;
+    top: 14%;
     right: 4%;
 
     background-color: #333;
@@ -76,7 +76,7 @@
 }
 .SidebarToggleBtn.open {
     position: fixed;
-    top: 4%;
+    top: 14%;
     right: 4%;
 
     background-color: rgb(189, 173, 173);
@@ -241,8 +241,8 @@
 .OverBackgroundImgText{
     color:white;
     top: 10%;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 15%;
+    margin-right: 15%;
 
     position: relative;
 
@@ -420,8 +420,8 @@ p{
     }
     /* Sidebar toggle button should be at the top of the screen */
     .SidebarToggleBtn {
-        top: 6%;
-        right: 10%;
+        top: 13%;
+        right: 5%;
         position: fixed;
         z-index: 1100;
         width: 3rem;
@@ -429,8 +429,8 @@ p{
 
     /* Display the sidebar toggle button differently on small screens */
     .SidebarToggleBtn.open {
-        top: 6%;
-        right: 10%;
+        top: 13%;
+        right: 5%;
         width: 3rem;
         background-color: rgb(189, 173, 173);
         color: black;
@@ -531,6 +531,9 @@ p{
     }
     .SideNavText{
         margin-bottom: 3rem;
+    }
+    .welcomeText{
+        margin-top: 2.6rem;
     }
 }
 

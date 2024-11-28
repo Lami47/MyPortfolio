@@ -3,8 +3,9 @@ import "../Css/Home.css";
 import '../Components/Items';
 import ItemList from "../Components/Items";
 import DisplayCards from "../Components/DisplayCards";
-import ContactUs from "../Components/ContactUs";
+// import ContactUs from "../Components/ContactUs";
 import Languages from "../Components/Languages";
+import Navbar from "../Components/Navbar";
 
 const userData = {
   name: 'Liam Rosenberg',
@@ -131,17 +132,16 @@ export default function Home() {
         <div className="MainScreen">
           <div className="MainImg">
             <div className="OverBackgroundImgText" >
-              <h1><strong>Welcome to</strong></h1>
-              <br/>
-              <h1><strong>{userData.name}'s Portfolio</strong></h1>
+              <h1 className="welcomeText"><strong> {userData.name}'s Portfolio</strong></h1>
             </div>
+            <Navbar/>
             <button
               className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
               onClick={toggleSidebar}
             >
             {isSidebarOpen ? <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/76STbZjY/12252572.png"/> : <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/q7P3k3b5/12252287.png"/>}
               </button>
-              <ContactUs/>
+              {/* <ContactUs/> */}
           </div>
           {/* Display cards section */}
           <div className="exp">
@@ -155,25 +155,7 @@ export default function Home() {
           <div className="SlideShow">
             <ItemList />
           </div>
-          {/* Showcase past projects */}
-          <br/>
-          <h2 className="SubHeadings">Links to previous projects that I've worked on:</h2>
-          <br/>
-          <div className="ShowCase">
-            <div className="GridItem1">
-              <h2 className="LinkHeadings">Study-Sphere</h2>
-              <a className="LinkStyles" href="https://study-sphere-spa.netlify.app/" target="blank">
-                <img className="ImgWithLinks" src="https://i.postimg.cc/fb5V967j/Screenshot-2024-11-21-102404.png" alt="AFK" />
-              </a>
-            </div>
-            <div className="GridItem3">
-              <h2 className="LinkHeadings">Hackathon - Ecolink - e-commerce project</h2>
-              <a className="LinkStyles" href="https://e-commerce-project-e24b8.web.app/" target="blank">
-                <img className="ImgWithLinks" src="https://i.postimg.cc/pXxYKtz3/image-2024-11-21-105312861.png" alt="AFK" />
-              </a>
-            </div>
-            {/* need to deploy the python project */}
-          </div>
+          {/* Footer*/}
         </div>
       </div>
     </>
