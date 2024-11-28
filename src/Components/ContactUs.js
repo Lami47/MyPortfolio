@@ -12,7 +12,7 @@ export default function ContactUs(){
     return(
     <>
         <button className={`ContactUsToggleBtn ${isContactUsOpen? 'open' : ''}`} onClick={() => handleTheButtonClick()}>
-            {isContactUsOpen? 'Close Contact us' : 'Contact us'}
+            {isContactUsOpen? 'Close Contact Liam' : 'Contact Liam'}
         </button>
         {isContactUsOpen && <ContactForm setContactUsOpen={setContactUsOpen} />}
     </>
@@ -60,7 +60,7 @@ function ContactForm({setContactUsOpen}){
     <>
         <div className='formMainBox'>
             <div className='formBox1'>
-                <h2 className='formTitle'> Contact Me </h2>
+                <h2 className='formTitle'> Contact Liam </h2>
                 <button className='closeForm' onClick={handleTheButtonClick}>X</button>
                 <form 
                 className='formContainer'
