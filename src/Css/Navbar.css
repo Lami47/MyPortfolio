@@ -107,16 +107,11 @@
         display: none;
     }
     .NavSection2{
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        width: 100%;
-        height: 100%;
-    }
-        .OverBackgroundImgText{
-            font-size: 4rem;
-        }
-    .NavSection3{
         display: none;
+    }
+    .NavSection3{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 0.8rem;
     }
 }
