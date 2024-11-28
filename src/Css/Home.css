@@ -420,7 +420,7 @@ p{
     /* Sidebar toggle button should be at the top of the screen */
     .SidebarToggleBtn {
         top: 6%;
-        right: 6%;
+        right: 10%;
         position: fixed;
         z-index: 1100;
         width: 3rem;
@@ -429,7 +429,7 @@ p{
     /* Display the sidebar toggle button differently on small screens */
     .SidebarToggleBtn.open {
         top: 6%;
-        right: 6%;
+        right: 10%;
         width: 3rem;
         background-color: rgb(189, 173, 173);
         color: black;
