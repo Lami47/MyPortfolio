@@ -60,9 +60,9 @@ const ItemList = () => {
         setIsItemVisible(true);
       };
     const handleClose = () => {
-      setDropDownIsOpen(false); // Close the dropdown
-      setIsItemVisible(false); // Hide item details
-      setSelectedId(null); // Clear selected item
+      setDropDownIsOpen(false); 
+      setIsItemVisible(false); 
+      setSelectedId(null); 
     };
 
     useEffect(() => {
@@ -70,7 +70,7 @@ const ItemList = () => {
           setCurrentIndex((prevIndex) => (prevIndex + 1) % items[0].imageSrc.length); // Loop through the images
         }, 6000); // 6 seconds interval
     
-        return () => clearInterval(interval); // Cleanup interval on component unmount
+        return () => clearInterval(interval);
     }, []);
     
 
@@ -90,10 +90,12 @@ const ItemList = () => {
     <>
       <div className="DropDown">
             <div className="dropdown">
-            <button onClick={() => setDropDownIsOpen(!dropDownIsOpen)}>
-                Select a project
-            </button>
-            {dropDownIsOpen && (
+              <div className="ItemsBtns">
+                <div>
+                  <button className="CloseItem1" onClick={() => setDropDownIsOpen(!dropDownIsOpen)}>
+                      Select a project
+                  </button>
+                {dropDownIsOpen && (
                 <div className="dropdown-menu">
                 {items.map((item) => (
                     <div 
@@ -106,11 +108,13 @@ const ItemList = () => {
                 ))}
                 </div>
             )}
+                </div>
+                <button className="CloseItem2" onClick={handleClose}>
+                  Close
+                </button>
+              </div>
             </div>
         </div>
-        <button className="CloseItems" onClick={handleClose}>
-          Close
-        </button>
 
         {selectedItem && isItemVisible && (
           <div className="ItemsGrid0">

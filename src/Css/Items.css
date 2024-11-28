@@ -116,12 +116,27 @@
     border: 1px dashed black;
     padding: 2rem;
 }
-.closeItems{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: start;
+.ItemsBtns{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    gap: 1rem;
 }
+    /*  */
+    .CloseItem1{
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .CloseItem2{
+        width: auto;
+        height: 3.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 @media (max-width: 1060px) {
     .ItemsGrid0{
@@ -163,5 +178,25 @@
         width: 90%;
         padding: 1.5rem;
     }
-
+    .ItemsBtns{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+        /*  */
+        .CloseItem1{
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .CloseItem2{
+            width: auto;
+            height: 3.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 }
