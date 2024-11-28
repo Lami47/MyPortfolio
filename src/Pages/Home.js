@@ -131,9 +131,6 @@ export default function Home() {
 
         <div className="MainScreen">
           <div className="MainImg">
-            <div className="OverBackgroundImgText" >
-              <h1 className="welcomeText"><strong> {userData.name}'s Portfolio</strong></h1>
-            </div>
             <Navbar/>
             <button
               className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
