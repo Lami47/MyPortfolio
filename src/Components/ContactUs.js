@@ -60,7 +60,7 @@ function ContactForm({setContactUsOpen}){
     <>
         <div className='formMainBox'>
             <div className='formBox1'>
-                <h2 className='formTitle'> Contact Us </h2>
+                <h2 className='formTitle'> Contact Me </h2>
                 <button className='closeForm' onClick={handleTheButtonClick}>X</button>
                 <form 
                 className='formContainer'
