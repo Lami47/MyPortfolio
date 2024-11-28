@@ -53,8 +53,6 @@ export default function Home() {
                 Liam Rosenberg
               </strong>
             </h3>
-            <br/>
-            <ContactUs/>
           </div>
           <div className="BottomOfSideBar">
               <br/>
@@ -143,6 +141,7 @@ export default function Home() {
             >
             {isSidebarOpen ? <img alt="open" className="sideNavIcon" src="https://i.postimg.cc/76STbZjY/12252572.png"/> : <img  className="sideNavIcon" src="https://i.postimg.cc/q7P3k3b5/12252287.png"/>}
               </button>
+              <ContactUs/>
           </div>
           {/* Display cards section */}
           <div className="exp">
