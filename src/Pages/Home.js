@@ -141,17 +141,17 @@ export default function Home() {
               {/* <ContactUs/> */}
           </div>
           {/* Display cards section */}
-          <div className="exp">
+          <section id="" className="exp">
               <DisplayCards />
-          </div>
-          <div>
+          </section>
+          <section id="Languages" className="Languages">
                 <Languages/>
-          </div>
+          </section>
           {/* slideshow with brief summary of the websites and what i contributed */}
           {/* About me description */}
-          <div className="SlideShow">
+          <section id="PastProjects" className="SlideShow">
             <ItemList />
-          </div>
+          </section>
           {/* Footer*/}
         </div>
       </div>

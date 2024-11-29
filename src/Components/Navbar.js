@@ -29,15 +29,21 @@ export default function Navbar(){
                     </div>
                     <div className='NavSection3'>
                         {/* list */}
-                        <button className='NavBtns'>
-                            Languages
-                        </button>
-                        <button className='NavBtns'>
-                            Past Projects
-                        </button>
-                        <button className='NavBtns'>
-                            Most Recent Project
-                        </button>
+                        <a href='#Languages'>
+                            <button className='NavBtns'>
+                                Languages
+                            </button>
+                        </a>
+                        <a href='#PastProjects'>
+                            <button className='NavBtns'>
+                                Past Projects
+                            </button>
+                        </a>
+                        <a>
+                            <button className='NavBtns'>
+                                Most Recent Project
+                            </button>
+                        </a>
                         <ContactUs/>
                     </div>
                 </div>
