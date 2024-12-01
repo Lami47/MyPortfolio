@@ -131,7 +131,9 @@ export default function Home() {
 
         <div className="MainScreen">
           <div className="MainImg">
-            <Navbar/>
+            <div className="NavbarHome">
+              <Navbar/>
+            </div>
             <button
               className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
               onClick={toggleSidebar}

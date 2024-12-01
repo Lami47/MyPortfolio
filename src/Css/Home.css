@@ -111,10 +111,11 @@
     grid-column: 2;
     border: 1px solid black;
     transition: margin-left 0.3s ease; /* Slide effect for content */
+    padding-top: 5rem;
 }
 
-.SideBar.open + .MainScreen {
-    margin-left: 24rem; /* Make space for the sidebar */
+.SideBar.open + .MainScreen{
+    margin-left: 26rem; /* Make space for the sidebar */
 }
 .sideNavIcon{
     width: 3rem;
@@ -131,10 +132,15 @@
     position: relative;
     width: 100%;
     height: 50rem;
+
     overflow: hidden;
     background-image: url('https://i.postimg.cc/hjCtXc0V/gk4cplcv63v61.webp');
     background-size: cover;
     background-position: center;
+}
+.NavbarHome {
+    width: 100%;
+    z-index: 1200; /* Ensure the navbar stays on top of the sidebar */
 }
 
 .BackgroundImg {
