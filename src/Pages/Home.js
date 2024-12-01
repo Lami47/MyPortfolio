@@ -131,7 +131,7 @@ export default function Home() {
 
         <div className="MainScreen">
           <div className="MainImg">
-            <div className="NavbarHome">
+            <div className="NavBarHome">
               <Navbar/>
             </div>
             <button
@@ -139,7 +139,7 @@ export default function Home() {
               onClick={toggleSidebar}
             >
             {isSidebarOpen ? <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/76STbZjY/12252572.png"/> : <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/q7P3k3b5/12252287.png"/>}
-              </button>
+            </button>
               {/* <ContactUs/> */}
           </div>
           {/* Display cards section */}
