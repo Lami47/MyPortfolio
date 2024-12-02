@@ -33,15 +33,20 @@ export default function Navbar(){
                             Languages
                         </button>
                     </a>
+                    <a href='#FavouriteProjects'>
+                        <button className='NavBtns'>
+                            Favourite Project
+                            </button>
+                    </a>
+                    <a href='#MostRecentProjects'>
+                        <button className='NavBtns'>
+                            Most Recent Project
+                            </button>
+                    </a>
                     <a href='#PastProjects'>
                         <button className='NavBtns'>
                             Past Projects
                         </button>
-                    </a>
-                    <a>
-                        <button className='NavBtns'>
-                            Most Recent Project
-                            </button>
                     </a>
                     <ContactUs/>
                 </div>

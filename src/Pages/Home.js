@@ -151,6 +151,12 @@ export default function Home() {
           </section>
           {/* slideshow with brief summary of the websites and what i contributed */}
           {/* About me description */}
+          <section id="FavouriteProject">
+            
+          </section>
+          <section id="MostRecentProject">
+
+          </section>
           <section id="PastProjects" className="SlideShow">
             <ItemList />
           </section>

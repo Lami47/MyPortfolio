@@ -1,6 +1,6 @@
 .NavGrid{
     height: 5rem;
-
+    width: 100vw;
 
     display: grid;
     grid-template-columns: 10% 40% 50%;
