@@ -115,7 +115,7 @@
 }
 
 .SideBar.open + .MainScreen{
-    margin-left: 26rem; /* Make space for the sidebar */
+    margin-left: 23rem; /* Make space for the sidebar */
 }
 .sideNavIcon{
     width: 3rem;
