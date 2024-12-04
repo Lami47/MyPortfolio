@@ -39,16 +39,17 @@
 /* SideBar */
 .SideBar {
     grid-column: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -25%; 
     width: 21.5%;
-    height: 100%;
+    height: 93%;
     background-color: #333;
     color: white;
     padding: 2rem;
     transition: left 0.3s ease;
     z-index: 1000;
+    overflow-x: hidden;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -357,20 +358,31 @@ p{
     /* Make the sidebar take up the entire width of the screen when opened */
     .SideBar {
         position: fixed;
+        margin-top: 5rem;
         top: 0;
         left: 0;
         width: 20rem;
-        height: 100%;
+        height: 85%;
+        background-color: #333;
+        color: white;
+        padding: 2rem;
         transition: transform 0.3s ease-in-out;
         transform: translateX(-100%);
+        z-index: 1200;
         overflow-y: auto;
-        
     }
 
     .SideBar.open {
         transform: translateX(0);
     }
-    
+    .NavBarHome {
+        width: 100%;
+        height: 5rem;
+        position: fixed;
+        top: 0;
+        z-index: 900; /* Lower z-index so it's behind the sidebar */
+        transition: 0.3s ease-in-out 1s;
+    }
 
     /* Adjust the main content's margin to make space for the sidebar */
     .MainScreen {
