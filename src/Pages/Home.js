@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="Grid0">
+      <div className={`Grid0 ${isSidebarOpen ? 'SidebarOpen' : ''}`}>
         {/* Button to open/close sidebar */}
         <div className={`SideBar ${isSidebarOpen ? 'open' : ''}`}>
           <div className="TopOfSideBar">

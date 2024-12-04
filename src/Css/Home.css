@@ -26,22 +26,28 @@
 }
 /* Card styling */
 .Grid0 {
-    width: auto;
+    display: grid;
+    grid-template-columns: 0% 100%;
+    width: 100%;
     height: auto;
     background-color: #333333;
+}
+.Grid0.open{
+    grid-template-columns: 30% 70%;
 }
 
 /* SideBar */
 .SideBar {
+    grid-column: 1;
     position: fixed;
     top: 0;
-    left: -30rem;  /* Initially hidden off-screen */
-    width: 20%;
+    left: -25%; 
+    width: 21.5%;
     height: 100%;
     background-color: #333;
     color: white;
     padding: 2rem;
-    transition: left 0.3s ease; /* Smooth transition for sliding */
+    transition: left 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
     display: flex;
@@ -115,7 +121,7 @@
 }
 
 .SideBar.open + .MainScreen{
-    margin-left: 23rem; /* Make space for the sidebar */
+    margin-left: 25%;
 }
 .sideNavIcon{
     width: 3rem;
