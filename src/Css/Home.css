@@ -39,7 +39,7 @@
 /* SideBar */
 .SideBar {
     grid-column: 1;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: -25%; 
     width: 21.5%;
@@ -343,6 +343,7 @@ p{
         height: auto;
         background-color: #333333;
         overflow-x: hidden;
+        grid-template-areas: "MainScreen";
     }
     .MainImg {
         position: relative;
@@ -422,6 +423,11 @@ p{
         color: black;
     }
 
+    .SideBar {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+    }
     /* Adjust the main content area to take full width when sidebar is open */
     .SideBar.open + .MainScreen {
         margin-left: 0;
