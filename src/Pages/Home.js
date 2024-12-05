@@ -131,32 +131,35 @@ export default function Home() {
 
         <div className="MainScreen">
           <div className="MainImg">
-            <div className="NavBarHome">
+            {/* NavBar */}
+            <div className={`NavBarHome" ${isSidebarOpen ? 'SidebarOpen' : ''}`}>
               <Navbar/>
             </div>
+            {/* Button to open/close sidebar */}
             <button
               className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
               onClick={toggleSidebar}
             >
             {isSidebarOpen ? <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/76STbZjY/12252572.png"/> : <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/q7P3k3b5/12252287.png"/>}
             </button>
-              {/* <ContactUs/> */}
           </div>
-          {/* Display cards section */}
+          {/* Display cards section */} {/* Needs to be changed, remove the button and just make it text boxes */}
           <section id="" className="exp">
               <DisplayCards />
           </section>
+          {/* Languages */} {/* Include more langauages*/}
           <section id="Languages" className="Languages">
                 <Languages/>
           </section>
-          {/* slideshow with brief summary of the websites and what i contributed */}
-          {/* About me description */}
+          {/* Favourite project that I've worked on thus far */}
           <section id="FavouriteProject">
             
           </section>
+          {/* Most recent project that I've worked on */}
           <section id="MostRecentProject">
 
           </section>
+          {/* PastProjects */}
           <section id="PastProjects" className="SlideShow">
             <ItemList />
           </section>

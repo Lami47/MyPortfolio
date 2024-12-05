@@ -9,7 +9,7 @@ const items = [
       "https://i.postimg.cc/hP5R3gg3/Screenshot-2024-11-21-130005.png",
       "https://i.postimg.cc/v8XsffKy/Screenshot-2024-11-21-130019.png",
       "https://i.postimg.cc/8cygGgvc/Screenshot-2024-11-21-130030.png",
-      "https://i.postimg.cc/g2LFC52c/Screenshot-2024-11-21-130109.png",
+      "https://i.postimg.cc/rwRCsHZj/Screenshot-2024-12-05-103058.png",
     ],
     title: "Study Sphere",
     text: "This project was focused around providing school kids, even those that cannot afford to go to school, a place to learn. We provide Tutoring session along with past papers and assistance with projects for school. I was tasked with creating the login pages as well as the Tutoring and Project sections. I really enjoyed creating this web application as this was my very 1st project, with just over 1 months experience in coding. I dont think I will change is as i will be using it as a reference to how much I've grown over the past few months",

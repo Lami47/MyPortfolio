@@ -1,11 +1,9 @@
 .LanguageContainer{
-    background-image: url('https://i.postimg.cc/PfzhP89C/OIP-2.jpg'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the whole container */
-    background-position: center; /* Position the image centrally */
-    background-attachment: fixed;
+
     height: auto;
     padding-top: 2rem;
     margin-bottom: 3rem;
+    background-color: black;
 
     display: flex;
     align-items: center;
@@ -119,11 +117,14 @@
     cursor: auto;
 }
 .LangCard:hover{
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
     scale: 1.2;
+    box-shadow: 0 0 1rem 1rem rgb(20, 192, 20);
 }
 #Langs1:hover, #Langs2:hover{
+    transition: 0.3s ease-in-out;
     scale:1;
+    box-shadow: 0 0 1rem 1rem rgb(204, 43, 43);
 }
 
 @media (max-width: 1060px) {
