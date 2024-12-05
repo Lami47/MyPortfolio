@@ -2,7 +2,7 @@
 
     height: auto;
     padding-top: 2rem;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
     background-color: black;
 
     display: flex;
@@ -16,7 +16,7 @@
     gap: 7rem;
     width: 100%;
     left: 0; 
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 .LanguagesGrid1{
     display: grid;
@@ -39,7 +39,6 @@
     transition: 0.3s ease-in-out;
 }
 .LangIconAround{
-
     border-radius: 2rem;
 }
 .LangIcon{

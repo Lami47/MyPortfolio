@@ -46,6 +46,9 @@ export default function Home() {
     <>
       <div className={`Grid0 ${isSidebarOpen ? 'SidebarOpen' : ''}`}>
         {/* Button to open/close sidebar */}
+        {/* github = https://github.com/lami47/ */}
+        {/* LinkedIn = https://www.linkedin.com/in/liam-rosenberg-585953246/ */}
+        {/* CV =  */}
         <div className={`SideBar ${isSidebarOpen ? 'open' : ''}`}>
           <div className="TopOfSideBar">
             <img className="Icon" src="https://i.postimg.cc/SN4ChRHv/Whats-App-Image-2024-11-19-at-10-35-07-f60543c5.jpg" alt="Brb" />
