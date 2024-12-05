@@ -26,7 +26,7 @@ export default function Languages(){
         <>
             <div className='LanguageContainer'>
                 <h2 className='HeadingText'>
-                    Click on the icons to see my Certificates
+                    Languages I'm adept with
                 </h2>
                 <div className="LanguagesGrid0">
                     {Language.slice(0, 3).map((lang, index) => (
