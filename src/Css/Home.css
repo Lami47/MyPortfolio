@@ -42,7 +42,7 @@
     position: fixed;
     top: 0;
     left: -26%; 
-    width: 21.5%;
+    width: 20%;
     height: 93%;
     background-color: #333;
     color: white;
@@ -50,11 +50,12 @@
     transition: left 0.3s ease;
     z-index: 1000;
     overflow-x: hidden;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
-
+.SideBar::-webkit-scrollbar{
+    text-decoration: none;
+}
 .SideBar.open {
     left: 0;
 }
@@ -340,7 +341,6 @@ p{
         height: auto;
     }
     .Grid0 {
-        width: 100%;
         height: auto;
         background-color: #333333;
         overflow-x: hidden;
@@ -361,7 +361,7 @@ p{
         margin-top: 5rem;
         top: 0;
         left: 0;
-        width: 20rem;
+        width: 85%;
         height: 85%;
         background-color: #333;
         color: white;
