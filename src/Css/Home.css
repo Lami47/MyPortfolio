@@ -480,7 +480,7 @@ p{
         text-align: center;
     
         width: 60%;
-        height: auto;
+        height: 20rem;
         padding: 2rem;
 
         position: fixed;
@@ -501,6 +501,10 @@ p{
     
         margin-bottom: 1rem;
         padding: 0;
+    }
+    .PopUpText{
+        height: 15rem;
+        overflow-y: scroll;
     }
     
     p{

@@ -57,7 +57,7 @@ function PopUpBtn ({ selectedId, isPopupOpen, setPopupOpen }) {
       <div className="PopUpWindow">
         <button className="CloseBtn" onClick={() => closePopup()}>X</button>
         <h3 className="PopUpHeading">{popup.heading}</h3>
-        <p>{popup.text}</p>
+        <p className="PopUpText">{popup.text}</p>
       </div>
     </>
 )}
