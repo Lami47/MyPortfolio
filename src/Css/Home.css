@@ -31,9 +31,11 @@
     width: 100%;
     height: auto;
     background-color: #333333;
+    overflow-x: hidden;
 }
 .Grid0.open{
     grid-template-columns: 30% 70%;
+    overflow: hidden;
 }
 
 /* SideBar */

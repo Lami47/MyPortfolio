@@ -85,17 +85,15 @@
 .popup-content {
     position: relative;
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 80%;
-    max-height: 80%;
+    padding: 1rem;
+    border-radius: 1rem;
+
     overflow: auto;
 }
 
 .popup-image {
     width: 100%;
-    max-height: 500px;
-    object-fit: contain;
+    height: 28rem;
 }
 
 .close-popup {
