@@ -40,18 +40,22 @@
 .SideBar {
     grid-column: 1;
     position: fixed;
+
+    display: flex;
+    flex-direction: column;
+
     top: 0;
     left: -26%; 
     width: 20%;
     height: 93%;
+    padding: 2rem;
+
     background-color: #333;
     color: white;
-    padding: 2rem;
+
     transition: left 0.3s ease;
     z-index: 1000;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
 }
 .SideBar::-webkit-scrollbar{
     text-decoration: none;
