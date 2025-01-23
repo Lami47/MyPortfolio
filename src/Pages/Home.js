@@ -131,7 +131,7 @@ export default function Home() {
                   href="https://docs.google.com/document/d/1FcPtwSDnWu8pZPbdHSOpIAZumgT-s40N/edit?usp=sharing&ouid=109684216417095121636&rtpof=true&sd=true"  // Updated path
                   download="LiamRosenbergCV.pdf"
                 >
-                  <h2>Download CV as Png</h2>
+                  <h2>Download CV</h2>
                 </a>
               </div>
             </section>
