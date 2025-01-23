@@ -3,7 +3,6 @@ import "../Css/Home.css";
 import '../Components/Items';
 import ItemList from "../Components/Items";
 import DisplayCards from "../Components/DisplayCards";
-// import ContactUs from "../Components/ContactUs";
 import Languages from "../Components/Languages";
 import Navbar from "../Components/Navbar";
 
@@ -29,7 +28,6 @@ const userData = {
   experience: [
     {jobTitle: 'Tutor', where:'Face-2-Face', duration: '', startingDate: 'August 2023', endingDate: 'Current' },
     {jobTitle: 'Systems Developing Intern',where: 'Capaciti', duration: '', startingDate: 'August 2024', endingDate: 'Current' },
-    // {jobTitle: '', where: '',duration: '', startingDate: '', endingDate: '' }
   ]
 };
 
@@ -45,10 +43,6 @@ export default function Home() {
   return (
     <>
       <div className={`Grid0 ${isSidebarOpen ? 'SidebarOpen' : ''}`}>
-        {/* Button to open/close sidebar */}
-        {/* github = https://github.com/lami47/ */}
-        {/* LinkedIn = https://www.linkedin.com/in/liam-rosenberg-585953246/ */}
-        {/* CV =  */}
         <div className={`SideBar ${isSidebarOpen ? 'open' : ''}`}>
           <div className="TopOfSideBar">
             <img className="Icon" src="https://i.postimg.cc/SN4ChRHv/Whats-App-Image-2024-11-19-at-10-35-07-f60543c5.jpg" alt="Brb" />
@@ -59,76 +53,88 @@ export default function Home() {
             </h3>
           </div>
           <div className="BottomOfSideBar">
-              <br/>
-                <h3>Age: {userData.age}</h3>
-              <br/>
-              <section className="SideNavText">
-                <h2 className="SubHeadings">Work Experience</h2>
-                <br/>
-                <ul>
-                {userData.workexperience.map((items,index) => (
-                    <li>
-                      <h3 className="SubHeading">
+            <br />
+            <h3>Age: {userData.age}</h3>
+            <br />
+            <section className="SideNavText">
+              <h2 className="SubHeadings">Work Experience</h2>
+              <br />
+              <ul>
+                {userData.workexperience.map((items, index) => (
+                  <li key={index}>
+                    <h3 className="SubHeading">
                       {items.posititon}
-                      </h3>
-                      <ul>
-                        <li key={index}>
-                          Start: {items.start}
-                        </li>
-                        <li key={index}>
-                          End: {items.end}
-                        </li>
-                        <li key={index}>
-                          Duration: {items.duration}
-                        </li>
-                        <br/>
-                      </ul>
-                    </li>
-                  ))}
-                  </ul>
-                  <br/>
-                  <h2 className="SubHeadings">education</h2>
-                  <br/>
-                  <ul>
-                  {userData.education.map((items,index) => (
-                    <li>
-                      <h3 className="SubHeading">
-                        {items.institute}
-                      </h3>
-                      <ul>
-                        <li key={index}>
-                          {items.course}
-                        </li>
-                        <li key={index}>
-                          {items.year}
-                        </li>
-                        <li key={index}>
-                          {items.duration}
-                        </li>
-                        <br/>
-                      </ul>
-                    </li>
-                  ))}
-                  </ul>
-              </section>
-              <br/>
-              <section className="SideNavText">
-                  <h2 className="SubHeadings">Skills</h2>
-                  <ul>
-                  {userData.skills.map((skill, index) => (
-                      <li key={index}> {skill} </li>
-                  ))}
-                  </ul>
-              </section>
-              <br/>
-              <section className="SideNavText">
-                  <h2 className="SubHeadings">Hobbies</h2>
-                  <ul>
-                  {userData.hobbies.map((hobby, index) => (
-                      <li key={index}> {hobby} </li>
-                  ))}
-                  </ul>
-              </section>
+                    </h3>
+                    <ul>
+                      <li>
+                        Start: {items.start}
+                      </li>
+                      <li>
+                        End: {items.end}
+                      </li>
+                      <li>
+                        Duration: {items.duration}
+                      </li>
+                      <br />
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+              <br />
+              <h2 className="SubHeadings">Education</h2>
+              <br />
+              <ul>
+                {userData.education.map((items, index) => (
+                  <li key={index}>
+                    <h3 className="SubHeading">
+                      {items.institute}
+                    </h3>
+                    <ul>
+                      <li>
+                        {items.course}
+                      </li>
+                      <li>
+                        {items.year}
+                      </li>
+                      <li>
+                        {items.duration}
+                      </li>
+                      <br />
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </section>
+            <br />
+            <section className="SideNavText">
+              <h2 className="SubHeadings">Skills</h2>
+              <ul>
+                {userData.skills.map((skill, index) => (
+                  <li key={index}> {skill} </li>
+                ))}
+              </ul>
+            </section>
+            <br />
+            <section className="SideNavText">
+              <h2 className="SubHeadings">Hobbies</h2>
+              <ul>
+                {userData.hobbies.map((hobby, index) => (
+                  <li key={index}> {hobby} </li>
+                ))}
+              </ul>
+            </section>
+            <br />
+            <section className="SideNavText">
+              <div className="">
+                <a 
+                  className="CVLink"
+                  href="https://docs.google.com/document/d/1ESwgtvPfCmwjJ-QACpSs5YgZA0pAqhva/edit?usp=sharing&ouid=109684216417095121636&rtpof=true&sd=true"  // Updated path
+                  download="LiamRosenbergCV.pdf"
+                >
+                  <h2>Download CV as Png</h2>
+                </a>
+              </div>
+            </section>
           </div>
         </div>
 
@@ -136,31 +142,29 @@ export default function Home() {
           <div className="MainImg">
             {/* NavBar */}
             <div className={`NavBarHome" ${isSidebarOpen ? 'SidebarOpen' : ''}`}>
-              <Navbar/>
+              <Navbar />
             </div>
             {/* Button to open/close sidebar */}
             <button
               className={`SidebarToggleBtn ${isSidebarOpen ? 'open' : ''}`}
               onClick={toggleSidebar}
             >
-            {isSidebarOpen ? <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/76STbZjY/12252572.png"/> : <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/q7P3k3b5/12252287.png"/>}
+              {isSidebarOpen ? <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/76STbZjY/12252572.png" /> : <img alt="NavIcon is on holiday rn...refresh the page" className="sideNavIcon" src="https://i.postimg.cc/q7P3k3b5/12252287.png" />}
             </button>
           </div>
-          {/* Display cards section */} {/* Needs to be changed, remove the button and just make it text boxes */}
+          {/* Display cards section */}
           <section id="" className="exp">
-              <DisplayCards />
+            <DisplayCards />
           </section>
-          {/* Languages */} {/* Include more langauages*/}
+          {/* Languages */}
           <section id="Languages" className="Languages">
-                <Languages/>
+            <Languages />
           </section>
           {/* Favourite project that I've worked on thus far */}
           <section id="FavouriteProject">
-            
           </section>
           {/* Most recent project that I've worked on */}
           <section id="MostRecentProject">
-
           </section>
           {/* PastProjects */}
           <section id="PastProjects" className="SlideShow">

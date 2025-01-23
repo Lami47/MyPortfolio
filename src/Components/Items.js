@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../Css/Items.css";
 
 const items = [
@@ -39,11 +39,18 @@ const ItemList = () => {
     const [dropDownIsOpen, setDropDownIsOpen] = useState(false);
     const [isItemVisible, setIsItemVisible] = useState(false);
 
+    // Ref for dropdown scroll
+    const dropdownRef = useRef(null);
+
+    // Ref to track the scroll position of the item description
+    const bottomRef = useRef(null);
+
     const handleButtonClick = (id) => {
         setSelectedId(id);
         setDropDownIsOpen(false);
         setIsItemVisible(true);
       };
+
     const handleClose = () => {
       setDropDownIsOpen(false); 
       setIsItemVisible(false); 
@@ -57,7 +64,20 @@ const ItemList = () => {
     
         return () => clearInterval(interval);
     }, []);
-    
+
+    useEffect(() => {
+        if (isItemVisible) {
+          // Scroll to the bottom when the item is selected and visible
+          bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [isItemVisible]); // Only triggers when the item is visible
+
+    useEffect(() => {
+        if (dropDownIsOpen) {
+            // Scroll to dropdown menu when it's opened
+            dropdownRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [dropDownIsOpen]); // Triggers when dropdown menu opens
 
     const selectedItem = items.find((item) => item.id === theSelectedId);
 
@@ -74,7 +94,7 @@ const ItemList = () => {
   return (
     <>
       <div className="DropDown">
-            <div className="dropdown">
+            <div className="dropdown" ref={dropdownRef}>
               <div className="ItemsBtns">
                 <div>
                   <button className="CloseItem1" onClick={() => setDropDownIsOpen(!dropDownIsOpen)}>
@@ -146,8 +166,9 @@ const ItemList = () => {
         )}
         {selectedItem && (
         <div className="item-describtion">
-            {/* <h1 className="item-describtion-heading">{selectedItem.title}</h1> */}
             <h3 className="itemDescribtionText">{selectedItem.text}</h3>
+            {/* Scroll target */}
+            <div ref={bottomRef} />
         </div>
         )}
     </>

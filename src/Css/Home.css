@@ -120,6 +120,19 @@
     scale:1.3;
 }
 
+/* Cv link */
+.CVLink{
+    width: 100%;
+
+    display: contents;
+    justify-content: center;
+
+}
+
+.CVLink:hover a{
+    text-decoration: underline;
+}
+
 /* Main Screen */
 .MainScreen {
     grid-column: 2;
