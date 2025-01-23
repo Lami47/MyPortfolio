@@ -128,7 +128,7 @@ export default function Home() {
               <div className="">
                 <a 
                   className="CVLink"
-                  href="https://docs.google.com/document/d/1ESwgtvPfCmwjJ-QACpSs5YgZA0pAqhva/edit?usp=sharing&ouid=109684216417095121636&rtpof=true&sd=true"  // Updated path
+                  href="https://docs.google.com/document/d/1FcPtwSDnWu8pZPbdHSOpIAZumgT-s40N/edit?usp=sharing&ouid=109684216417095121636&rtpof=true&sd=true"  // Updated path
                   download="LiamRosenbergCV.pdf"
                 >
                   <h2>Download CV as Png</h2>
