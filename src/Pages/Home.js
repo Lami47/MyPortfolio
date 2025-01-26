@@ -43,6 +43,7 @@ export default function Home() {
   return (
     <>
       <div className={`Grid0 ${isSidebarOpen ? 'SidebarOpen' : ''}`}>
+        {/* Left side */}
         <div className={`SideBar ${isSidebarOpen ? 'open' : ''}`}>
           <div className="TopOfSideBar">
             <img className="Icon" src="https://i.postimg.cc/SN4ChRHv/Whats-App-Image-2024-11-19-at-10-35-07-f60543c5.jpg" alt="Brb" />
@@ -130,14 +131,16 @@ export default function Home() {
                   className="CVLink"
                   href="https://docs.google.com/document/d/1FcPtwSDnWu8pZPbdHSOpIAZumgT-s40N/edit?usp=sharing&ouid=109684216417095121636&rtpof=true&sd=true"  // Updated path
                   download="LiamRosenbergCV.pdf"
+                  target="blank"
                 >
-                  <h2>Download CV</h2>
+                  <h2 class="CVLinkText">Download CV</h2>
                 </a>
               </div>
             </section>
           </div>
         </div>
-
+        
+        {/* Right side */}
         <div className="MainScreen">
           <div className="MainImg">
             {/* NavBar */}
